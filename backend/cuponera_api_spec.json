@@ -1,0 +1,252 @@
+{
+  "title": "Especificación API Cuponera - Backend y requisitos para el frontend",
+  "version": "1.0",
+  "base_url": "Ejemplo: http://localhost:8000",
+
+  "backend": {
+    "description": "Lo que el backend (API descuentos) implementa",
+    "endpoints": {
+      "redeem": {
+        "method": "GET",
+        "path": "/redeem",
+        "description": "Canjear código de cuponera: obtiene descuentos del día y datos del usuario. Opcionalmente registra un uso.",
+        "query_params": {
+          "code": { "type": "string", "required": true, "description": "Código del usuario en la cuponera (se normaliza a mayúsculas)" },
+          "date": { "type": "string", "required": false, "description": "Fecha YYYY-MM-DD. Por defecto: hoy" },
+          "record_use": { "type": "boolean", "required": false, "default": false, "description": "Si true, consume un uso del día para este código" }
+        },
+        "responses": {
+          "200_ok": {
+            "success": true,
+            "message": "string",
+            "cuponera_name": "string | null",
+            "discounts": [ { "discount_id": "string", "discount": "objeto regla de descuento" } ],
+            "uses_remaining_today": "number | null",
+            "user": { 
+              "name": "string (nombre completo, se mantiene para compatibilidad)", 
+              "first_name": "string | null (nombre separado)",
+              "last_name": "string | null (apellido separado)",
+              "phone": "string", 
+              "phone_code": "string | null (código de país, ej. '+57', default '+57')",
+              "email": "string", 
+              "address": "string | null" 
+            } | null,
+            "cuponera_site_ids": "number[] | null",
+            "free_product": {
+              "product_id": "string",
+              "name": "string (nombre del producto)",
+              "price": "number",
+              "image": "string (URL de la imagen)",
+              "category_id": "string",
+              "max_qty": "number (cantidad máxima gratis según el descuento)"
+            } | null,
+            "discount_categories": [
+              {
+                "category_id": "string",
+                "name": "string (nombre de la categoría)",
+                "image": "string (URL de la imagen)"
+              }
+            ] | null,
+            "discount_products": [
+              {
+                "product_id": "string",
+                "name": "string (nombre del producto)",
+                "price": "number",
+                "image": "string (URL de la imagen)",
+                "category_id": "string"
+              }
+            ] | null,
+            "notes": [
+              "free_product se incluye solo si el descuento del día es FREE_ITEM",
+              "discount_categories se incluye solo si el descuento es CATEGORY_PERCENT_OFF o CATEGORY_AMOUNT_OFF",
+              "discount_products se incluye solo si el descuento es PRODUCT_PERCENT_OFF o PRODUCT_AMOUNT_OFF"
+            ]
+          },
+          "200_invalid": {
+            "success": false,
+            "message": "string (ej. Código no válido, Cuponera no activa, vigencia, etc.)"
+          },
+          "400": { "detail": "Código requerido" }
+        }
+      },
+      "cuponeras_list": {
+        "method": "GET",
+        "path": "/cuponeras",
+        "description": "Lista todas las cuponeras (CRUD admin)"
+      },
+      "cuponera_get": {
+        "method": "GET",
+        "path": "/cuponeras/{cuponera_id}",
+        "description": "Obtiene una cuponera por ID"
+      },
+      "cuponera_users_list": {
+        "method": "GET",
+        "path": "/cuponeras/{cuponera_id}/users",
+        "description": "Lista usuarios registrados en una cuponera"
+      },
+      "cuponera_user_create": {
+        "method": "POST",
+        "path": "/cuponeras/{cuponera_id}/users",
+        "description": "Registra un usuario en una cuponera. Requiere nombre, apellido, teléfono y email con validación de formato.",
+        "body": {
+          "first_name": "string (requerido, nombre, mínimo 1 carácter)",
+          "last_name": "string (requerido, apellido, mínimo 1 carácter)",
+          "phone": "string (requerido, debe ser válido según phone_code)",
+          "phone_code": "string (opcional, código de país ej. '+57' o '57'; default '+57'). El backend valida que el teléfono corresponda a este código de país.",
+          "email": "string (requerido, formato email válido: ejemplo@dominio.com)",
+          "address": "string | null (opcional)",
+          "code": "string | null (opcional: si no se envía, el sistema lo genera)"
+        },
+        "responses": {
+          "201": "Usuario creado exitosamente",
+          "400": "Error de validación: email inválido, teléfono no corresponde al código de país, nombre/apellido vacío, código duplicado",
+          "404": "Cuponera no encontrada"
+        },
+        "validations": {
+          "email": "Valida formato email (presencia de @ y dominio)",
+          "phone": "Usa librería phonenumbers para validar que el teléfono sea válido según el código de país",
+          "code": "Valida unicidad en cuponeras vigentes"
+        }
+      },
+      "cuponera_user_update": {
+        "method": "PATCH",
+        "path": "/cuponeras/{cuponera_id}/users/{user_id}",
+        "description": "Actualiza un usuario de cuponera. Todos los campos son opcionales.",
+        "body": {
+          "first_name": "string (opcional)",
+          "last_name": "string (opcional)",
+          "phone": "string (opcional, valida con phone_code si se proporciona)",
+          "phone_code": "string (opcional)",
+          "email": "string (opcional, valida formato)",
+          "address": "string | null (opcional)",
+          "code": "string | null (opcional, valida unicidad)"
+        },
+        "responses": {
+          "200": "Usuario actualizado",
+          "400": "Error de validación: email inválido, teléfono no válido para código de país, código duplicado",
+          "404": "Cuponera o usuario no encontrado"
+        },
+        "validations": {
+          "email": "Si se proporciona, valida formato",
+          "phone": "Si se actualiza phone o phone_code, valida coherencia entre ambos"
+        }
+      }
+    },
+    "models": {
+      "Cuponera": {
+        "id": "string",
+        "name": "string",
+        "description": "string | null",
+        "uses_per_day": "number (default 1)",
+        "calendar": "object: YYYY-MM-DD -> [discount_id]",
+        "site_ids": "number[] | null (null = todas las sedes)",
+        "folder": "string | null",
+        "active": "boolean",
+        "start_date": "string YYYY-MM-DD | null",
+        "end_date": "string YYYY-MM-DD | null",
+        "created_at": "string | null",
+        "updated_at": "string | null"
+      },
+      "Discount_rule": {
+        "id": "string",
+        "type": "CART_PERCENT_OFF | CART_AMOUNT_OFF | FREE_ITEM | BUY_M_PAY_N | ...",
+        "name": "string",
+        "params": "ej. { pct: number } o { amount: number }",
+        "conditions": "ej. { min_subtotal: number }",
+        "site_ids": "number[] | null",
+        "scope": "object"
+      }
+    },
+    "reglas_negocio_backend": [
+      "Cuponera vigente = active true y fecha hoy dentro de [start_date, end_date] (si están definidos)",
+      "El código se busca en usuarios de cuponera; si hay varias cuponeras con ese código, se usa la vigente",
+      "uses_remaining_today = uses_per_day - usos ya registrados hoy para ese código en esa cuponera",
+      "record_use=true solo resta un uso si uses_remaining_today > 0"
+    ]
+  },
+
+  "frontend": {
+    "description": "Lo que un front que quiera usar esta cuponera debe implementar y validar",
+    "config": {
+      "api_base": "URL base de la API cuponera (ej. http://localhost:8000). Configurable por entorno (ej. NUXT_PUBLIC_CUPONERA_API)."
+    },
+    "flujo_principal": [
+      "1. Usuario escribe código en checkout/pago",
+      "2. Front llama GET {api_base}/redeem?code={codigo} (sin record_use para solo consultar)",
+      "3. Si success=false: mostrar message y opcionalmente intentar otro tipo de cupón (ej. cupón normal de otra API)",
+      "4. Si success=true: aplicar validaciones del front y, si todo ok, rellenar datos y aplicar descuento"
+    ],
+    "validaciones_obligatorias_frontend": [
+      {
+        "id": "sede_cuponera",
+        "nombre": "Sede permitida (nivel cuponera)",
+        "descripcion": "La cuponera puede restringirse a ciertas sedes (site_ids). Si la respuesta incluye cuponera_site_ids y es un array no vacío, el site_id actual del usuario debe estar en esa lista.",
+        "campo_respuesta": "cuponera_site_ids",
+        "logica": "Si cuponera_site_ids es array y length > 0, entonces site_id_actual debe estar en cuponera_site_ids. Si cuponera_site_ids es null o array vacío, aplica a todas las sedes.",
+        "mensaje_error_sugerido": "No válido en esta sede"
+      },
+      {
+        "id": "sede_descuento",
+        "nombre": "Sede permitida (nivel descuento individual)",
+        "descripcion": "Cada descuento dentro de la cuponera puede tener su propio site_ids que restringe en qué sedes aplica ese descuento específico.",
+        "campo_respuesta": "discounts[].discount.site_ids",
+        "logica": "Para cada descuento en discounts[], si discount.site_ids es array no vacío, validar que site_id_actual esté en ese array. Si site_ids es null o vacío, el descuento aplica a todas las sedes (o solo las de la cuponera si cuponera_site_ids existe).",
+        "mensaje_error_sugerido": "Descuento no disponible en esta sede",
+        "nota": "Esta validación se hace DESPUÉS de validar cuponera_site_ids. Un descuento puede ser más restrictivo que la cuponera misma."
+      },
+      {
+        "id": "usos_restantes",
+        "nombre": "Usos restantes hoy",
+        "descripcion": "El usuario no puede usar el descuento si ya agotó los usos del día.",
+        "campo_respuesta": "uses_remaining_today",
+        "logica": "Si uses_remaining_today < 0, rechazar. Si es 0, se puede mostrar aviso (ej. 'No quedan usos para hoy') y no aplicar descuento o no permitir continuar.",
+        "mensaje_error_sugerido": "No quedan usos para hoy"
+      },
+      {
+        "id": "monto_minimo",
+        "nombre": "Monto mínimo del descuento",
+        "descripcion": "Cada regla de descuento puede tener conditions.min_subtotal. El front debe validar que el subtotal del carrito sea >= ese valor.",
+        "campo_descuento": "discount.conditions.min_subtotal",
+        "logica": "Para el primer descuento aplicable (ej. CART_PERCENT_OFF o CART_AMOUNT_OFF), si existe conditions.min_subtotal, entonces cartSubtotal >= min_subtotal.",
+        "mensaje_error_sugerido": "El monto mínimo de compra es: {formato_moneda(min_subtotal)}"
+      },
+      {
+        "id": "tipo_descuento",
+        "nombre": "Tipo de descuento aplicable",
+        "descripcion": "El front típicamente solo aplica CART_PERCENT_OFF o CART_AMOUNT_OFF. Otros tipos (FREE_ITEM, BUY_M_PAY_N, etc.) requieren lógica específica.",
+        "logica": "Si discounts[0].discount.type === 'CART_PERCENT_OFF', usar params.pct (o params.percent). Si type === 'CART_AMOUNT_OFF', usar params.amount. Mapear a la estructura de cupón que use el carrito (percent o amount, code, discount_name, min_purchase)."
+      }
+    ],
+    "datos_usuario_autocompletar": {
+      "descripcion": "Si success=true y user no es null, el front puede rellenar el formulario de pago/checkout con:",
+      "campos": {
+        "user.name": "Nombre completo (se mantiene para compatibilidad)",
+        "user.first_name": "Nombre (ya separado por el backend)",
+        "user.last_name": "Apellido (ya separado por el backend)",
+        "user.phone": "Teléfono",
+        "user.phone_code": "Código de país del teléfono (ej. '+57'), default '+57' si no está presente",
+        "user.email": "Email",
+        "user.address": "Dirección (opcional)"
+      },
+      "nota": "El backend divide automáticamente user.name en first_name/last_name cuando el usuario fue creado con nombre completo. El front debe usar first_name y last_name directamente."
+    },
+    "aplicar_descuento_en_carrito": {
+      "descripcion": "Mapear el primer descuento del día a la estructura que espera el store del carrito:",
+      "CART_PERCENT_OFF": "coupon.percent = discount.params.pct (o params.percent)",
+      "CART_AMOUNT_OFF": "coupon.amount = discount.params.amount",
+      "otros_campos": "code (código ingresado), discount_name (discount.name), min_purchase (discount.conditions.min_subtotal si existe)"
+    },
+    "registrar_uso": {
+      "descripcion": "Al confirmar la orden (pago exitoso), el front puede llamar GET /redeem?code=X&record_use=true para consumir un uso del día. Opcional según negocio."
+    },
+    "resumen_validaciones": [
+      "Validar que la respuesta sea success=true",
+      "Validar sede: cuponera_site_ids incluye site_id actual (o es null/[])",
+      "Validar uses_remaining_today >= 0 (y opcionalmente > 0 para permitir aplicar)",
+      "Validar subtotal del carrito >= min_subtotal del descuento (si existe)",
+      "Rellenar datos de usuario desde response.user",
+      "Mapear primer descuento CART_* a cupón y aplicar en carrito",
+      "Opcional: llamar redeem con record_use=true al confirmar orden"
+    ]
+  }
+}

@@ -1,0 +1,341 @@
+{
+    "schema_version": "1.0",
+    "currency": "COP",
+    "rounding_rule": {
+      "mode": "ROUND_HALF_UP",
+      "precision_decimals": 0
+    },
+    "core_concepts": {
+      "line_item": {
+        "meaning": "Producto en el carrito (incluye cantidad, precio unitario, descuentos por unidad, y adiciones si existen).",
+        "fields_expected": [
+          "product_id",
+          "category_id",
+          "qty",
+          "unit_price",
+          "addons_total_per_unit",
+          "unit_discount_existing"
+        ],
+        "computed_values": {
+          "unit_effective_price_before_promo": "(unit_price - unit_discount_existing) + addons_total_per_unit",
+          "line_subtotal_before_promo": "unit_effective_price_before_promo * qty"
+        }
+      },
+      "scope": {
+        "meaning": "Define cuáles ítems del carrito son elegibles para la promo.",
+        "types": [
+          {
+            "scope_type": "ALL_ITEMS",
+            "meaning": "Todos los productos del carrito son elegibles (salvo exclusiones)."
+          },
+          {
+            "scope_type": "CATEGORY_IDS",
+            "meaning": "Solo productos cuya category_id esté en category_ids."
+          },
+          {
+            "scope_type": "PRODUCT_IDS",
+            "meaning": "Solo productos cuyo product_id esté en product_ids."
+          }
+        ],
+        "common_fields": [
+          "scope_type",
+          "category_ids",
+          "product_ids",
+          "exclude_category_ids",
+          "exclude_product_ids"
+        ]
+      },
+      "selection_rules": {
+        "meaning": "Regla para escoger qué unidades reciben descuento o son gratis.",
+        "allowed": [
+          "CHEAPEST_UNITS",
+          "MOST_EXPENSIVE_UNITS",
+          "SPECIFIC_PRODUCT",
+          "CUSTOMER_CHOICE"
+        ],
+        "default": "CHEAPEST_UNITS"
+      },
+      "limits": {
+        "meaning": "Topes para evitar descuentos ilimitados.",
+        "fields": [
+          "max_groups",
+          "max_discount_amount",
+          "max_free_qty"
+        ]
+      }
+    },
+    "discount_types": [
+      {
+        "type": "CART_PERCENT_OFF",
+        "title": "Porcentaje de descuento en todo el carrito",
+        "unambiguous_definition": {
+          "scope": "Define los ítems elegibles. El descuento se calcula sobre el subtotal elegible.",
+          "discount_value": "discount = round(subtotal_eligible * (pct/100))",
+          "cap": "discount <= subtotal_eligible"
+        },
+        "inputs": {
+          "pct": "number (0..100)",
+          "scope": {
+            "scope_type": "ALL_ITEMS | CATEGORY_IDS | PRODUCT_IDS",
+            "category_ids": "array<string> optional",
+            "product_ids": "array<string> optional",
+            "exclude_category_ids": "array<string> optional",
+            "exclude_product_ids": "array<string> optional"
+          },
+          "conditions": {
+            "min_subtotal": "number optional",
+            "coupon_code": "string optional"
+          },
+          "limits": {
+            "max_discount_amount": "number optional"
+          }
+        },
+        "algorithm_steps_for_ai": [
+          "Compute subtotal_eligible by summing line_subtotal_before_promo of eligible items.",
+          "If conditions.min_subtotal exists and subtotal_eligible < min_subtotal: discount = 0.",
+          "discount_raw = subtotal_eligible * pct/100.",
+          "discount = round(discount_raw) using rounding_rule.",
+          "If limits.max_discount_amount exists: discount = min(discount, max_discount_amount).",
+          "discount = min(discount, subtotal_eligible).",
+          "Apply discount as a cart-level discount (or distribute proportionally across eligible lines if needed)."
+        ],
+        "example_rule": {
+          "type": "CART_PERCENT_OFF",
+          "params": { "pct": 10 },
+          "scope": { "scope_type": "ALL_ITEMS" },
+          "conditions": { "min_subtotal": 50000 },
+          "limits": { "max_discount_amount": 20000 }
+        }
+      },
+      {
+        "type": "CART_AMOUNT_OFF",
+        "title": "Descuento de valor fijo en todo el carrito",
+        "unambiguous_definition": {
+          "scope": "Define ítems elegibles. El descuento no puede superar el subtotal elegible.",
+          "discount_value": "discount = min(amount, subtotal_eligible)"
+        },
+        "inputs": {
+          "amount": "number (>0)",
+          "scope": {
+            "scope_type": "ALL_ITEMS | CATEGORY_IDS | PRODUCT_IDS",
+            "category_ids": "array<string> optional",
+            "product_ids": "array<string> optional",
+            "exclude_category_ids": "array<string> optional",
+            "exclude_product_ids": "array<string> optional"
+          },
+          "conditions": {
+            "min_subtotal": "number optional",
+            "coupon_code": "string optional"
+          }
+        },
+        "algorithm_steps_for_ai": [
+          "Compute subtotal_eligible.",
+          "If min_subtotal exists and subtotal_eligible < min_subtotal: discount = 0.",
+          "discount = min(amount, subtotal_eligible).",
+          "Apply discount at cart-level (or distribute proportionally across eligible lines)."
+        ],
+        "example_rule": {
+          "type": "CART_AMOUNT_OFF",
+          "params": { "amount": 15000 },
+          "scope": { "scope_type": "ALL_ITEMS" },
+          "conditions": { "min_subtotal": 60000 }
+        }
+      },
+      {
+        "type": "FREE_ITEM",
+        "title": "Producto gratis",
+        "unambiguous_definition": {
+          "what_is_free": "Una (o varias) unidades se descuentan al 100% (precio 0).",
+          "selection": "Si no es un producto específico, se elige la unidad más barata dentro del scope (CHEAPEST_UNITS).",
+          "cap": "La cantidad gratis se limita por max_free_qty."
+        },
+        "inputs": {
+          "free_item": {
+            "mode": "SPECIFIC_PRODUCT | CHEAPEST_IN_SCOPE | CUSTOMER_CHOICE",
+            "product_id": "string required if mode=SPECIFIC_PRODUCT",
+            "allowed_product_ids": "array<string> optional if mode=CUSTOMER_CHOICE"
+          },
+          "requires_purchase": {
+            "type": "NONE | MIN_QTY_IN_SCOPE | MIN_SUBTOTAL_IN_SCOPE | BUY_X_IN_SCOPE",
+            "min_qty": "number optional",
+            "min_subtotal": "number optional",
+            "buy_x_qty": "number optional"
+          },
+          "scope": {
+            "scope_type": "ALL_ITEMS | CATEGORY_IDS | PRODUCT_IDS",
+            "category_ids": "array<string> optional",
+            "product_ids": "array<string> optional",
+            "exclude_category_ids": "array<string> optional",
+            "exclude_product_ids": "array<string> optional"
+          },
+          "limits": {
+            "max_free_qty": "number (>=1)"
+          }
+        },
+        "algorithm_steps_for_ai": [
+          "Check purchase requirement (requires_purchase) against eligible items/subtotal.",
+          "If requirement not met: free_qty = 0.",
+          "Determine candidate units for being free based on free_item.mode:",
+          "- SPECIFIC_PRODUCT: only units of that product_id.",
+          "- CHEAPEST_IN_SCOPE: any eligible unit; pick cheapest units.",
+          "- CUSTOMER_CHOICE: units among allowed_product_ids chosen by customer; if none chosen, treat as no discount.",
+          "free_qty = min(available_candidate_qty, limits.max_free_qty).",
+          "Apply 100% discount to free_qty units (set their promo discount equal to their unit_effective_price_before_promo)."
+        ],
+        "example_rule": {
+          "type": "FREE_ITEM",
+          "params": {
+            "free_item": { "mode": "CHEAPEST_IN_SCOPE" },
+            "requires_purchase": { "type": "MIN_SUBTOTAL_IN_SCOPE", "min_subtotal": 80000 }
+          },
+          "scope": { "scope_type": "CATEGORY_IDS", "category_ids": ["BEBIDAS"] },
+          "limits": { "max_free_qty": 1 }
+        }
+      },
+      {
+        "type": "BUY_M_PAY_N",
+        "title": "M x N (paga N, lleva M) por scope",
+        "unambiguous_definition": {
+          "rule": "Por cada grupo de M unidades elegibles, solo se cobran N. El resto (M-N) se descuenta al 100%.",
+          "group_count": "groups = floor(total_qty_eligible / M)",
+          "discounted_units_count": "discount_units = groups * (M - N)",
+          "which_units": "Se descuenta primero las unidades más baratas (CHEAPEST_UNITS) dentro del scope."
+        },
+        "inputs": {
+          "m": "number (>=1)",
+          "n": "number (>=0 and < m)",
+          "scope": {
+            "scope_type": "ALL_ITEMS | CATEGORY_IDS | PRODUCT_IDS",
+            "category_ids": "array<string> optional",
+            "product_ids": "array<string> optional",
+            "exclude_category_ids": "array<string> optional",
+            "exclude_product_ids": "array<string> optional"
+          },
+          "selection_rule": "CHEAPEST_UNITS | MOST_EXPENSIVE_UNITS",
+          "limits": {
+            "max_groups": "number optional"
+          }
+        },
+        "algorithm_steps_for_ai": [
+          "Collect all eligible units as a list of unit prices (unit_effective_price_before_promo), expanding by qty.",
+          "Sort by price ascending if selection_rule=CHEAPEST_UNITS else descending.",
+          "total_qty_eligible = count(units).",
+          "groups = floor(total_qty_eligible / m). If limits.max_groups exists: groups = min(groups, max_groups).",
+          "discount_units = groups * (m - n).",
+          "Apply 100% discount to the first discount_units in the sorted list (map back to line_items)."
+        ],
+        "example_rule": {
+          "type": "BUY_M_PAY_N",
+          "params": { "m": 3, "n": 2, "selection_rule": "CHEAPEST_UNITS" },
+          "scope": { "scope_type": "ALL_ITEMS" },
+          "limits": { "max_groups": 5 }
+        }
+      },
+      {
+        "type": "CATEGORY_PERCENT_OFF",
+        "title": "Porcentaje de descuento en X categoría",
+        "unambiguous_definition": {
+          "scope": "Solo aplica a productos en category_ids.",
+          "discount_value": "Por línea: discount_line = round(line_subtotal_before_promo * pct/100)"
+        },
+        "inputs": {
+          "pct": "number (0..100)",
+          "scope": {
+            "scope_type": "CATEGORY_IDS",
+            "category_ids": "array<string> required",
+            "exclude_product_ids": "array<string> optional"
+          },
+          "conditions": {
+            "min_qty_in_category": "number optional",
+            "min_subtotal_in_category": "number optional"
+          },
+          "limits": {
+            "max_discount_amount": "number optional"
+          }
+        },
+        "algorithm_steps_for_ai": [
+          "Filter line_items where category_id in category_ids and product_id not in exclude_product_ids.",
+          "Compute qty_in_category and subtotal_in_category.",
+          "If min_qty_in_category exists and qty_in_category < it: no discount.",
+          "If min_subtotal_in_category exists and subtotal_in_category < it: no discount.",
+          "For each eligible line: discount_line = round(line_subtotal_before_promo * pct/100).",
+          "If max_discount_amount exists, cap total discount across lines."
+        ],
+        "example_rule": {
+          "type": "CATEGORY_PERCENT_OFF",
+          "params": { "pct": 15 },
+          "scope": { "scope_type": "CATEGORY_IDS", "category_ids": ["POSTRES"] },
+          "conditions": { "min_qty_in_category": 2 }
+        }
+      },
+      {
+        "type": "BUY_X_GET_Y_PERCENT_OFF",
+        "title": "Compra X y obtén Y con % de descuento (generaliza 'el segundo a mitad')",
+        "unambiguous_definition": {
+          "rule": "Por cada grupo de (X + Y) unidades elegibles: X unidades se cobran al 100% y Y unidades reciben y_discount_pct.",
+          "group_count": "groups = floor(total_qty_eligible / (X + Y))",
+          "discounted_units_count": "discount_units = groups * Y",
+          "which_units_get_discount": "Las Y unidades con descuento se eligen por regla fija: CHEAPEST_UNITS (recomendado)."
+        },
+        "inputs": {
+          "x": "number (>=1)",
+          "y": "number (>=1)",
+          "y_discount_pct": "number (0..100)",
+          "scope": {
+            "scope_type": "ALL_ITEMS | CATEGORY_IDS | PRODUCT_IDS",
+            "category_ids": "array<string> optional",
+            "product_ids": "array<string> optional",
+            "exclude_category_ids": "array<string> optional",
+            "exclude_product_ids": "array<string> optional"
+          },
+          "selection_rule": "CHEAPEST_UNITS | MOST_EXPENSIVE_UNITS",
+          "limits": {
+            "max_groups": "number optional",
+            "max_discount_amount": "number optional"
+          }
+        },
+        "algorithm_steps_for_ai": [
+          "Collect all eligible units as a list of unit prices, expanding by qty.",
+          "Sort based on selection_rule.",
+          "group_size = x + y.",
+          "groups = floor(total_qty_eligible / group_size). If max_groups exists, cap it.",
+          "discount_units = groups * y.",
+          "For the chosen discount_units, apply discount of (y_discount_pct/100) to each unit price.",
+          "If max_discount_amount exists, cap total discount."
+        ],
+        "example_rule_second_half_price": {
+          "type": "BUY_X_GET_Y_PERCENT_OFF",
+          "params": { "x": 1, "y": 1, "y_discount_pct": 50, "selection_rule": "CHEAPEST_UNITS" },
+          "scope": { "scope_type": "ALL_ITEMS" },
+          "limits": { "max_groups": 20 }
+        }
+      }
+    ],
+    "rule_object_template": {
+      "id": "string (unique)",
+      "type": "one of discount_types[].type",
+      "name": "string (human label)",
+      "priority": "number (lower runs first)",
+      "stacking_policy": {
+        "mode": "EXCLUSIVE | STACKABLE",
+        "exclusive_group": "string optional (if EXCLUSIVE)"
+      },
+      "scope": {
+        "scope_type": "ALL_ITEMS | CATEGORY_IDS | PRODUCT_IDS",
+        "category_ids": [],
+        "product_ids": [],
+        "exclude_category_ids": [],
+        "exclude_product_ids": []
+      },
+      "conditions": {},
+      "params": {},
+      "limits": {},
+      "selection_rule": "CHEAPEST_UNITS",
+      "apply_as": "CART_LEVEL | LINE_LEVEL",
+      "audit": {
+        "reason_code": "string",
+        "explain": "string (one sentence explanation for logs)"
+      }
+    }
+  }
+  

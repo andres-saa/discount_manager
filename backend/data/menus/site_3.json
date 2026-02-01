@@ -1,0 +1,3377 @@
+{
+  "site_id": 3,
+  "local_id": 7,
+  "categorias": [
+    {
+      "categoria_id": "133",
+      "english_name": "Irresistible Combos",
+      "categoria_descripcion": "COMBOS DEL MES",
+      "categoria_color": "#e74c3c",
+      "index": 0,
+      "visible": true,
+      "products": [
+        {
+          "producto_id": 478,
+          "english_name": "",
+          "english_description": "",
+          "producto_descripcion": "COMBO PAISA (La nea personal + Bebida 250ml)",
+          "discount_amount": 0.0,
+          "discount_percent": 0.0,
+          "productogeneral_descripcionadicional": "Salchipapa 712gr petsonal + Bebida Gratis con Papa...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/dea5259d-a4b6-4a23-9173-c34125a864fd.jpg",
+          "productogeneral_precio": "31000.00",
+          "productogeneral_escombo": "1",
+          "index": 999,
+          "categoria_id": "133"
+        },
+        {
+          "producto_id": 475,
+          "english_name": "",
+          "english_description": "",
+          "producto_descripcion": "COMBO TU CRUSH (Costimonster Personal + Bebida 250ml + Postre)",
+          "discount_amount": 0.0,
+          "discount_percent": 0.0,
+          "productogeneral_descripcionadicional": "Costimonster personal + Coca-Cola Zero de 250m + p...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/6ee9a2bd-8dee-46be-90a2-a0d724736dce.jpg",
+          "productogeneral_precio": "31000.00",
+          "productogeneral_escombo": "1",
+          "index": 999,
+          "categoria_id": "133"
+        },
+        {
+          "producto_id": 465,
+          "english_name": "",
+          "english_description": "",
+          "producto_descripcion": "SALCHI PA SOLTEROS  (La de Siempre personal)",
+          "discount_amount": 0.0,
+          "discount_percent": 0.0,
+          "productogeneral_descripcionadicional": "Salchipapa 752 gr PERSONAL ,Papa Amarilla,Salchich...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/9d99b217-75e7-4712-8dbf-f28f80978c49.jpg",
+          "productogeneral_precio": "24000.00",
+          "productogeneral_escombo": "1",
+          "index": 0,
+          "categoria_id": "133"
+        },
+        {
+          "producto_id": 464,
+          "english_name": "",
+          "english_description": "",
+          "producto_descripcion": "COMBO RESCATE (Samba Pers + Bebida 250ml)",
+          "discount_amount": 0.0,
+          "discount_percent": 0.0,
+          "productogeneral_descripcionadicional": "Salchipapa 792 gr PERSONAL+ BEBIDA 250 ML GRATIS ,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/ce5af9de-3af5-4e5a-a072-b15fbefceebd.jpeg",
+          "productogeneral_precio": "24000.00",
+          "productogeneral_escombo": "1",
+          "index": 0,
+          "categoria_id": "133"
+        },
+        {
+          "producto_id": 485,
+          "english_name": "",
+          "english_description": "",
+          "producto_descripcion": "SALCHI DESVARE (Clasicmonster Personal)",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa para 1 persona con Papa Amarilla, Salch...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/4a31d4e5-fcbe-40c0-8127-0e487e4d0b37.jpeg",
+          "productogeneral_precio": "19900.00",
+          "productogeneral_escombo": "1",
+          "index": 0,
+          "categoria_id": "133"
+        },
+        {
+          "producto_id": 467,
+          "english_name": "",
+          "english_description": "",
+          "producto_descripcion": "COMBO DUO (Clasica Pers + Maduri Pers + 2 Bebidas 250 ml)",
+          "discount_amount": 0.0,
+          "discount_percent": 0.0,
+          "productogeneral_descripcionadicional": "1 ClasicMonster Personal + 1 Madurimonster Persona...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/2585267f-b17b-48c7-900c-1239f432437d.jpeg",
+          "productogeneral_precio": "49900.00",
+          "productogeneral_escombo": "1",
+          "index": 0,
+          "categoria_id": "133"
+        },
+        {
+          "producto_id": 226,
+          "english_name": "",
+          "english_description": "",
+          "producto_descripcion": "COMBO ASALARIADO (Salchimonster + Bebida 1.5 Lt + Show de Queso)",
+          "discount_amount": 0.0,
+          "discount_percent": 0.0,
+          "productogeneral_descripcionadicional": "Salchipapa 3435 gr para SEIS HAMBRIENTOS GRATIS SH...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/f3277d05-9831-4b5e-a1f7-04ced02eb8b8.png",
+          "productogeneral_precio": "137900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "133",
+          "lista_presentacion": [
+            {
+              "producto_id": "226",
+              "producto_precio": "137900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/105ee3af-7689-4588-95d6-f4419368e9ed.png",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria_id": "8",
+      "english_name": "Combos for 2",
+      "categoria_descripcion": "COMBOS 2 PERSONAS",
+      "categoria_color": "#51b46d",
+      "index": 1,
+      "visible": true,
+      "products": [
+        {
+          "producto_id": 460,
+          "english_name": "Love & Friendship Combo",
+          "english_description": "Dtodito salchipapa + 2 lemonades.",
+          "producto_descripcion": "COMBO AMOR Y AMISTAD",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/ec693c95-bbb5-408e-adc2-b55da1cd6651.jpg",
+          "productogeneral_precio": "63900.00",
+          "productogeneral_escombo": "1",
+          "index": 0,
+          "categoria_id": "8"
+        },
+        {
+          "producto_id": 29,
+          "english_name": "BaconMonster for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "BACONMONSTER 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1114 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/11a41e28-d1bc-40c8-bbd1-93bfd82a014c.jpeg",
+          "productogeneral_precio": "43400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "29",
+              "producto_precio": "43400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/55a1ba92-2fd1-4457-ac37-d0dc6c7a263c.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 351,
+          "english_name": "Pork Rind & Ribs for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "CHICHARRON COSTILLA 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1494 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/7a2a8da9-afe6-4ca2-9a16-065dbc840e6d.jpeg",
+          "productogeneral_precio": "83400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "351",
+              "producto_precio": "83400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/db82a019-fe92-4c20-a288-2b722f9cdc21.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 352,
+          "english_name": "Pork Rind & Plantain for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "CHICHARRON MADURO 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1344 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/23765189-6083-4458-9d32-49ec785e2d77.jpeg",
+          "productogeneral_precio": "66400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "352",
+              "producto_precio": "66400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/5ba2bdcb-00c5-4b75-b576-e5e34287361b.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 30,
+          "english_name": "ClassicMonster for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "CLASICMONSTER 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1019 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/68f17457-9cf3-4cd1-bdca-b7422397e2ea.jpg",
+          "productogeneral_precio": "33400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "30",
+              "producto_precio": "33400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/e35d7ad4-63ef-41ae-8d55-e27d86c758fd.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 31,
+          "english_name": "CostiMonster for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "COSTIMONSTER 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1264 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/4bf189a0-05fe-40de-b759-488483ca0667.jpeg",
+          "productogeneral_precio": "57900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "31",
+              "producto_precio": "57900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/435b82de-6241-4998-9098-1640448e32f2.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 36,
+          "english_name": "La de Siempre for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "LA DE SIEMPRE 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1299 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/2b98e286-c895-4d34-bb76-30728ee62864.jpeg",
+          "productogeneral_precio": "63400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "36",
+              "producto_precio": "63400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/51780392-9082-4d73-afe2-f34d08f37f5e.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 37,
+          "english_name": "La Mixtica for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "LA MIXTICA 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1264 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/45e47c17-1007-466d-a2fb-31cb6fa373a4.jpeg",
+          "productogeneral_precio": "72400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "37",
+              "producto_precio": "72400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/423fb0a1-2e85-4387-a25a-75f6ef7360c3.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 38,
+          "english_name": "La Nea for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "LA NEA 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1394 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/ec227a83-aa27-4281-8993-82a5a19d29e7.jpeg",
+          "productogeneral_precio": "71900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "38",
+              "producto_precio": "71900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/c613611d-8813-4740-979e-e414f12dbfea.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 32,
+          "english_name": "MaduriMonster for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "MADURIMONSTER 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1114 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/0a945bdb-a897-4878-9505-1c4438f05cf1.jpeg",
+          "productogeneral_precio": "43400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "32",
+              "producto_precio": "43400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/0c658528-dc9c-444d-ae06-e34fc0b0dbe9.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 39,
+          "english_name": "Hunger Killer for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "MATA HAMBRE 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1354 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/b42b9db5-0577-4dea-bf9b-9e20f1f8f63d.jpeg",
+          "productogeneral_precio": "56900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "39",
+              "producto_precio": "56900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/c7904c5b-e9a1-4a8d-b3cc-404edf81a7e4.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 33,
+          "english_name": "NachiMonster for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, pulled beef...",
+          "producto_descripcion": "NACHIMONSTER 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1154 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/e07d45c6-6430-4c08-a339-7045e524ef8c.jpeg",
+          "productogeneral_precio": "56900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "33",
+              "producto_precio": "56900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/328d7173-9935-4fb4-a49e-c748d304b69f.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 34,
+          "english_name": "PolliMonster for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "POLLIMONSTER 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1284 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/a6ee45e2-0e48-4cbb-aa50-b757a802ba4a.jpeg",
+          "productogeneral_precio": "49400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "34",
+              "producto_precio": "49400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/50e81c81-0147-4762-8e7a-8c381653428d.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 40,
+          "english_name": "PorkyMonster for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "PORKYMONSTER 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1214 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/d2a498a2-7f17-4c06-9ead-138abcd8fadf.jpeg",
+          "productogeneral_precio": "60400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "40",
+              "producto_precio": "60400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/c36ffd97-33db-4ed5-873a-6acb8f418cd4.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 41,
+          "english_name": "RanchiMonster for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Ranchera sa...",
+          "producto_descripcion": "RANCHIMONSTER 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1134 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/e947d8d3-a6f8-4d3f-a465-03ea8c3b2bd7.jpeg",
+          "productogeneral_precio": "51400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "41",
+              "producto_precio": "51400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/99bf2679-a6b4-4524-8f15-dfb21281bf5c.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 354,
+          "english_name": "Samba for 2 + 2 Free Drinks",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "SAMBA 2 PERSONAS + 2 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1264 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/bfd687b8-34a0-4b48-a559-292cc2906b1f.jpeg",
+          "productogeneral_precio": "47400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "8",
+          "lista_presentacion": [
+            {
+              "producto_id": "354",
+              "producto_precio": "47400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/97ae35ce-c435-4df6-8f17-17ce1dfab3bc.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria_id": "9",
+      "english_name": "Personal Combos",
+      "categoria_descripcion": "COMBOS PERSONALES",
+      "categoria_color": "#f092b0",
+      "index": 2,
+      "visible": true,
+      "products": [
+        {
+          "producto_id": 43,
+          "english_name": "BaconMonster Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "BACONMONSTER PERSONAL + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 642 gr ,Papa Amarilla, Salchic...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/3129ec49-7507-4e47-a52b-70eb40bcd199.jpeg",
+          "productogeneral_precio": "30900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "43",
+              "producto_precio": "30900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/878b309f-dde1-4ced-b5d7-37eb95e25f23.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 355,
+          "english_name": "Pork Rind & Ribs Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "CHICHARRON COSTILLA PERSONAL + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 862 gr , Papa amarilla,Salchic...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/cc7ab6c8-0eed-4363-99f4-8709353be66c.jpeg",
+          "productogeneral_precio": "53400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "355",
+              "producto_precio": "53400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/39379c64-9044-423b-b7e6-a1f294fed801.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 356,
+          "english_name": "Pork Rind & Plantain Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "CHICHARRON MADURO PERSONAL + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 812 gr , Papa amarilla,Salchic...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/bdac0363-a8c0-41ae-b5b0-0beef424f1af.jpeg",
+          "productogeneral_precio": "46400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "356",
+              "producto_precio": "46400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/9e9004db-ff33-470e-96cc-d5e1f9fd85b1.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 44,
+          "english_name": "ClassicMonster Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "CLASICMONSTER PERSONAL + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 557 gr , Papa Amarilla, Salchi...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/15e2c02e-c639-4d37-887d-955328cb9901.jpg",
+          "productogeneral_precio": "25900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "44",
+              "producto_precio": "25900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/0e0318e5-97b8-4cd6-97c2-ff1fbe7ceb2a.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 45,
+          "english_name": "CostiMonster Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "COSTIMONSTER PERSONAL + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 747 gr ,Papa amarilla,Salchich...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/9bf76159-0a4f-44c1-b00e-c2491018a5ad.jpeg",
+          "productogeneral_precio": "37400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "45",
+              "producto_precio": "37400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/95c6f121-8776-487d-a4b7-bea4ba813cb8.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 143,
+          "english_name": "Dtodito Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "DETODITO PERSONAL + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 892 gr, Papa Amarilla,Salchich...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/092d9f2d-097d-4298-ad26-6d70ace68bc9.jpg",
+          "productogeneral_precio": "42900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "143",
+              "producto_precio": "42900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/bcaa6deb-eb23-44fb-affa-f13538f7ed96.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 46,
+          "english_name": "La de Siempre Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "LA DE SIEMPRE PERSONAL + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 752 gr ,Papa amarilla,Salchich...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/3792be47-63c2-4b0c-ab0a-c8f26adc8f4c.jpg",
+          "productogeneral_precio": "44400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "46",
+              "producto_precio": "44400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/d7cf229b-0757-4638-8802-14d46a625bf1.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 47,
+          "english_name": "La Mixtica Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "LA MIXTICA PERSONAL + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 812 gr , Papa amarilla,Salchic...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/c57d5111-0a1b-4b1c-9c53-759a973c8060.jpeg",
+          "productogeneral_precio": "49900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "47",
+              "producto_precio": "49900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/7231e752-e975-4d2a-adc6-5bf26f7dff0c.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 48,
+          "english_name": "MaduriMonster Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "MADURIMONSTER PERSONAL + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 652 gr , Papa Amarilla, Salchi...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/39187ed1-859f-4f6f-a5bd-29fae64da3b6.jpg",
+          "productogeneral_precio": "30900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "48",
+              "producto_precio": "30900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/265fca28-223a-4d59-9301-d8314f326dc7.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 49,
+          "english_name": "Hunger Killer Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "MATA HAMBRE PERSONAL + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 792 gr , Papa amarilla,Salchic...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/0e1c57a1-32ab-4d03-aec6-283e0c42e2fd.jpeg",
+          "productogeneral_precio": "40400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "49",
+              "producto_precio": "40400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/7676d592-de2b-45a3-9efc-053ec80bba64.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 50,
+          "english_name": "NachiMonster Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, pulled beef...",
+          "producto_descripcion": "NACHIMONSTER PERSONAL + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 710 gr ,Papa Amarilla,Carne De...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/6b736baa-8041-49fd-96cf-d9d12f3dcaf5.jpeg",
+          "productogeneral_precio": "39400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "50",
+              "producto_precio": "39400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/3898e5f2-c09a-415a-bb2a-e776647050a9.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 141,
+          "english_name": "Bacon Fries + Free Drink",
+          "english_description": "Single-serve fries with melted cheese, premium bac...",
+          "producto_descripcion": "PAPAS BACON + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Porcion de Papas personal 432 gr, Papa Amarilla,Qu...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/77b153a7-777e-4de7-82ad-1029148ca8ab.jpeg",
+          "productogeneral_precio": "22400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "141",
+              "producto_precio": "22400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/5871f1bd-d68a-4733-8174-80eadd2af982.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 51,
+          "english_name": "PolliMonster Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "POLLIMONSTER PERSONAL+ BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 724 gr , Papa Amarilla, Salchi...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/a420972a-230b-4234-8d43-a6a7e9d8ffd7.jpeg",
+          "productogeneral_precio": "34400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "51",
+              "producto_precio": "34400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/845978bb-2972-4054-84a1-00c2833ff6e6.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 52,
+          "english_name": "PorkyMonster Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "PORKYMONSTER PERSONAL + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 682 gr , Papa amarilla,Salchic...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/584ae69c-e105-4cd8-998a-b798ee817f97.jpeg",
+          "productogeneral_precio": "39400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "52",
+              "producto_precio": "39400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/f2a59df5-2ae2-4e3a-9149-53316bcc720f.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": "PORKYMONSTER PERSONAL"
+            }
+          ]
+        },
+        {
+          "producto_id": 53,
+          "english_name": "RanchiMonster Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Ranchera sa...",
+          "producto_descripcion": "RANCHIMONSTER PERSONAL + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 592 gr , Papa Amarilla,Salchic...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/235d71ed-5fb3-4f94-b69d-f2c33d6d43f7.jpeg",
+          "productogeneral_precio": "36400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "53",
+              "producto_precio": "36400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/44d0d485-e2bb-4e70-8133-eda6faacb62c.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 357,
+          "english_name": "Samba Personal + Free Drink",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "SAMBA PERSONAL + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 792 gr , Papa Amarilla, Salchi...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/a62d4c39-99fe-4186-9f0b-2f94ab8cd525.jpg",
+          "productogeneral_precio": "35400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "9",
+          "lista_presentacion": [
+            {
+              "producto_id": "357",
+              "producto_precio": "35400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/a8cac7c5-8152-496c-b466-0a3c9d399910.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria_id": "128",
+      "english_name": "Salchipapas for 2",
+      "categoria_descripcion": "SALCHIPAPAS PA 2",
+      "categoria_color": "#e74c3c",
+      "index": 3,
+      "visible": true,
+      "products": [
+        {
+          "producto_id": 459,
+          "english_name": "BaconMonster for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "BACONMONSTER 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1114 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/e4a2469e-ddc9-45d7-a41b-6f906d21e44a.jpg",
+          "productogeneral_precio": "43400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "459",
+              "producto_precio": "43400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/609bbdfc-9971-43a8-b377-044233d8e77d.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 430,
+          "english_name": "Pork Rind & Ribs for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "CHICHARRON COSTILLA 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1494 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/f35ae6ad-336d-4a13-a734-cd61b959a535.jpg",
+          "productogeneral_precio": "83400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "430",
+              "producto_precio": "83400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/1babc9e5-c5f2-491d-ac4c-ac801608a529.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 429,
+          "english_name": "Pork Rind & Plantain for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "CHICHARRON MADURO 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1344 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/f4a6f72d-7053-417e-86b5-ee7b4510dd6b.jpg",
+          "productogeneral_precio": "66400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "429",
+              "producto_precio": "66400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/5d09e9f1-2e81-42cb-a7dd-147c9b6a54ab.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 458,
+          "english_name": "ClassicMonster for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "CLASICMONSTER 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1019 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/dfbc1bbe-4cf6-4594-ad31-a9eeda8d76b8.jpg",
+          "productogeneral_precio": "33400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "458",
+              "producto_precio": "33400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/7122d58d-1393-4eb3-8afd-ec23f6a9166c.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 456,
+          "english_name": "CostiMonster for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "COSTIMONSTER 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1264 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/57939302-4152-4406-ae9a-c8a7b8a1dfab.jpg",
+          "productogeneral_precio": "57900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "456",
+              "producto_precio": "57900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/ec939c44-a234-4154-8e66-f96911473d04.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 450,
+          "english_name": "La de Siempre for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "LA DE SIEMPRE 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa para 2 personas con Papa amarilla,Salch...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/c39bb4d9-2616-467a-921d-27879a5bbf85.jpg",
+          "productogeneral_precio": "63400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "450",
+              "producto_precio": "63400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/e123d36f-7b53-4340-91e4-c06dc2375450.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 449,
+          "english_name": "La Mixtica for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "LA MIXTICA 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1264 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/ac2717c9-6e0e-4917-8dbc-6e64ff3dfb8a.jpg",
+          "productogeneral_precio": "72400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "449",
+              "producto_precio": "72400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/b35217a5-72fe-46db-84e2-dc582b87ee66.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 440,
+          "english_name": "La Nea for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "LA NEA 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1394 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/72b7c6a2-d5ae-4087-a0f3-8e4740620170.jpg",
+          "productogeneral_precio": "71900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "440",
+              "producto_precio": "71900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/c0b04589-6be2-450f-b914-bfbbd623d3e1.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 432,
+          "english_name": "RanchiMonster for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Ranchera sa...",
+          "producto_descripcion": "RANCHIMONSTER 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1134 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/888bf030-a424-4859-a98f-358856a61ab5.jpg",
+          "productogeneral_precio": "51400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "432",
+              "producto_precio": "51400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/1cc59be4-9b95-418c-8b2e-deb6c63ac871.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 455,
+          "english_name": "MaduriMonster for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "MADURIMONSTER 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1114 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/0798162d-ee24-47a8-93c0-d82b6adbd3d7.jpg",
+          "productogeneral_precio": "43400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "455",
+              "producto_precio": "43400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/f25aadd4-45ae-4f57-8936-fa7b6d5decc5.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 438,
+          "english_name": "Hunger Killer for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "MATA HAMBRE 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1354 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/dfe03aa0-9f28-4b79-81b2-95283b15b081.jpg",
+          "productogeneral_precio": "56900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "438",
+              "producto_precio": "56900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/c532ef89-e379-4765-bce9-d09b6f04efb4.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 453,
+          "english_name": "NachiMonster for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, pulled beef...",
+          "producto_descripcion": "NACHIMONSTER 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1154 gr  para 2 personas ,Papa Amarilla...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/c491b684-5877-4887-b33a-57295ec42492.jpg",
+          "productogeneral_precio": "56900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "453",
+              "producto_precio": "56900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/b086acfc-da66-4026-bd60-06543e09ec28.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 452,
+          "english_name": "PolliMonster for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "POLLIMONSTER 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1284 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/2be6f46d-5d6d-461e-8209-0eaa851d33ba.jpg",
+          "productogeneral_precio": "49400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "452",
+              "producto_precio": "49400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/527df6a0-996f-48e3-9fc1-a99848250387.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 434,
+          "english_name": "PorkyMonster for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "PORKYMONSTER 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1214 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/7ff25de9-e851-4238-8dc2-9221a19ab407.jpg",
+          "productogeneral_precio": "60400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "434",
+              "producto_precio": "60400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/ee64a422-a595-4056-95c9-eb3c630a346e.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 426,
+          "english_name": "Samba for 2",
+          "english_description": "Salchipapa for 2 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "SAMBA 2 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa 1264 gr para 2 personas ,Papa Amarilla,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/ba273fb1-c4b2-4291-8c5b-416f7d6979cd.jpg",
+          "productogeneral_precio": "47400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "128",
+          "lista_presentacion": [
+            {
+              "producto_id": "426",
+              "producto_precio": "47400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/97a142bf-80ed-4684-97c7-fcfd86e1335c.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria_id": "129",
+      "english_name": "Salchipapas for 1",
+      "categoria_descripcion": "SALCHIPAPAS PA 1",
+      "categoria_color": "#e74c3c",
+      "index": 4,
+      "visible": true,
+      "products": [
+        {
+          "producto_id": 476,
+          "english_name": "",
+          "english_description": "",
+          "producto_descripcion": "LA NEA PERSONAL",
+          "discount_amount": 4790.0,
+          "discount_percent": 10.0,
+          "productogeneral_descripcionadicional": "Salchipapa 712gr Personal ,Papa Amarilla,Salchicha...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/67fddd75-589e-439f-b2ca-ff7a9f3850f8.jpg",
+          "productogeneral_precio": "47900.00",
+          "productogeneral_escombo": "0",
+          "index": 999,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "476",
+              "producto_precio": "47900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/6561b5d5-8efd-409a-b4c9-0123638a3dcc.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 435,
+          "english_name": "Bacon Fries",
+          "english_description": "Single-serve fries with melted cheese, premium bac...",
+          "producto_descripcion": "PAPAS BACON",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Porcion de Papas personal 432 gr, Papa Amarilla,Qu...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/00e36147-0afb-442d-80c5-d7fd6d4a3c18.jpg",
+          "productogeneral_precio": "22400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "435",
+              "producto_precio": "22400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/ee6ebbee-62bb-4792-8d2d-37119055c16d.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 447,
+          "english_name": "ClassicMonster Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "CLASICMONSTER PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 557 gr , Papa Amarilla, Salchi...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/809ea042-b63a-4a76-8349-d0a628f2e011.jpg",
+          "productogeneral_precio": "25900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "447",
+              "producto_precio": "25900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/012e494d-2a22-4c88-9312-08e022d60838.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 446,
+          "english_name": "CostiMonster Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "COSTIMONSTER PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 747 gr ,Papa amarilla,Salchich...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/5e89e23d-ca50-4fe4-9b8d-c16f89af0ed3.jpg",
+          "productogeneral_precio": "37400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "446",
+              "producto_precio": "37400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/e8985ba0-a1a8-47ec-9d12-635eaf3dc60d.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 433,
+          "english_name": "Dtodito Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "DETODITO PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 892 gr, Papa Amarilla,Salchich...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/e634b871-b322-4ff7-bba1-3a3eb9f65809.jpg",
+          "productogeneral_precio": "42900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "433",
+              "producto_precio": "42900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/06ee90ff-98c1-4abc-8671-18d59ba602a0.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 445,
+          "english_name": "La de Siempre Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "LA DE SIEMPRE PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 752 gr ,Papa amarilla,Salchich...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/7b124c9d-c831-4fca-887b-011bc89d27cd.jpg",
+          "productogeneral_precio": "44400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "445",
+              "producto_precio": "44400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/30d43897-d936-4364-a816-a1e1a7323bf1.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 444,
+          "english_name": "La Mixtica Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "LA MIXTICA PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 812 gr , Papa amarilla,Salchic...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/8b5fe821-ec45-4436-a3cf-8951a8917d7c.jpg",
+          "productogeneral_precio": "49900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "444",
+              "producto_precio": "49900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/14e5c803-b5ff-4b04-9941-21ccb9962a92.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 443,
+          "english_name": "MaduriMonster Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "MADURIMONSTER PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 652 gr , Papa Amarilla, Salchi...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/76890d37-5a1d-4ee4-a55a-92bf4875ea03.jpg",
+          "productogeneral_precio": "30900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "443",
+              "producto_precio": "30900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/8647385d-25a2-422f-9902-38ab2c7675aa.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 442,
+          "english_name": "Hunger Killer Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "MATA HAMBRE PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 792 gr , Papa amarilla,Salchic...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/1f70b66c-4533-4129-98f7-78446a70a41d.jpg",
+          "productogeneral_precio": "40400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "442",
+              "producto_precio": "40400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/28e0254b-4957-4448-8866-b337cbcc2987.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 441,
+          "english_name": "NachiMonster Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, pulled beef...",
+          "producto_descripcion": "NACHIMONSTER PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 710 gr ,Papa Amarilla,Carne De...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/3f36145f-1744-4f30-abfc-778039f35663.jpg",
+          "productogeneral_precio": "39400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "441",
+              "producto_precio": "39400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/df0c4c3f-6492-4cae-a9c3-6dee0b54654c.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 439,
+          "english_name": "PolliMonster Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "POLLIMONSTER PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 724 gr , Papa Amarilla, Salchi...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/edd97115-8a2e-461d-a5b7-7c114f99b931.jpg",
+          "productogeneral_precio": "34400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "439",
+              "producto_precio": "34400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/a6465a7a-1dba-4c5c-9ad5-a44f040f11ba.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 437,
+          "english_name": "PorkyMonster Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "PORKYMONSTER PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 682 gr , Papa amarilla,Salchic...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/a7131849-732d-4c88-8cf3-6e548e7b4b31.jpg",
+          "productogeneral_precio": "39400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "437",
+              "producto_precio": "39400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/712bbedb-8092-4f53-8807-fd1b22cd4778.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 436,
+          "english_name": "RanchiMonster Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Ranchera sa...",
+          "producto_descripcion": "RANCHIMONSTER PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 592 gr , Papa Amarilla,Salchic...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/8e776989-c400-46fa-910c-30326b6e61d2.jpg",
+          "productogeneral_precio": "36400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "436",
+              "producto_precio": "36400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/3eac0d9d-fed1-4b92-be95-df7b9dda9c47.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 427,
+          "english_name": "Samba Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "SAMBA PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 792 gr , Papa Amarilla, Salchi...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/09148567-6908-406b-80a3-b2db593bd8be.jpg",
+          "productogeneral_precio": "35400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "427",
+              "producto_precio": "35400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/8ff660be-e41d-42a1-9b47-41b4707d95ed.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 448,
+          "english_name": "BaconMonster Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "BACONMONSTER PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 642 gr ,Papa Amarilla, Salchic...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/a6464c40-1b0c-4d44-a064-c79df0c20dcd.jpg",
+          "productogeneral_precio": "30900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "448",
+              "producto_precio": "30900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/22521e70-6ad9-4a76-84ea-2320ad5d554f.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 350,
+          "english_name": "Monster Kids Box",
+          "english_description": "Mini kids salchipapa with French fries, Premium SM...",
+          "producto_descripcion": "CAJA MONSTER KIDS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productos/4bf95776-73e1-4593-9113-6cd383d50f70.jpg",
+          "productogeneral_precio": "26900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "350",
+              "producto_precio": "26900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/4bf95776-73e1-4593-9113-6cd383d50f70.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 431,
+          "english_name": "Pork Rind & Ribs Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "CHICHARRON COSTILLA PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 862 gr , Papa amarilla,Salchic...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/96a19b8e-681b-453b-8377-3b395390d703.jpg",
+          "productogeneral_precio": "53400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "431",
+              "producto_precio": "53400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/595bc2e6-4f7f-46b7-9710-0aceb8af24c9.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 428,
+          "english_name": "Pork Rind & Plantain Personal",
+          "english_description": "Salchipapa for 1 with yellow potatoes, Premium SM...",
+          "producto_descripcion": "CHICHARRON MADURO PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Personal 812 gr , Papa amarilla,Salchic...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/78ad2fb6-e4ea-410c-a0e1-ddfc1f3dda6f.jpg",
+          "productogeneral_precio": "46400.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "129",
+          "lista_presentacion": [
+            {
+              "producto_id": "428",
+              "producto_precio": "46400.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/f18e0b9c-66b6-447c-a933-0b1e5d8a2d1d.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria_id": "122",
+      "english_name": "2-for-1 Burgers",
+      "categoria_descripcion": "2X1 HAMBURGUESAS",
+      "categoria_color": "#e74c3c",
+      "index": 5,
+      "visible": true,
+      "products": [
+        {
+          "producto_id": 153,
+          "english_name": "2x1 La Realeza + 2 Fries",
+          "english_description": "Two 120 g beef burgers with mozzarella, tomato, le...",
+          "producto_descripcion": "2X1 LA REALEZA + 2 PAPAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "2 Hamburguesa 120 gr de carne 100% de res, queso m...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/0837b6f5-1db7-4beb-9c23-a7058bcd9dc4.jpg",
+          "productogeneral_precio": "63900.00",
+          "productogeneral_escombo": "1",
+          "index": 0,
+          "categoria_id": "122"
+        },
+        {
+          "producto_id": 147,
+          "english_name": "2x1 Monsterghetto + 2 Fries",
+          "english_description": "Two 120 g beef burgers with mozzarella, street-sty...",
+          "producto_descripcion": "2X1 MONSTERGUETTO + 2 PAPAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "2 Hamburguesa de 120 gr de carne 100% de res, ques...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/5362ca80-e2cb-4b52-a9c9-1eaf8447a476.jpg",
+          "productogeneral_precio": "39900.00",
+          "productogeneral_escombo": "1",
+          "index": 0,
+          "categoria_id": "122"
+        },
+        {
+          "producto_id": 134,
+          "english_name": "Combo Burgermonster + Fries + 250 ml Drink",
+          "english_description": "Burgermonster with fries and a 250 ml soda.",
+          "producto_descripcion": "COMBO BURGERMONSTER+PAPAS+BEBIDA250 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Hamburguesa 120 gr de carne 100% de res, cebolla c...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/ae8a3c82-e4c4-4043-b305-b647921ef531.jpeg",
+          "productogeneral_precio": "33900.00",
+          "productogeneral_escombo": "1",
+          "index": 0,
+          "categoria_id": "122"
+        },
+        {
+          "producto_id": 152,
+          "english_name": "2x1 Oiga Mire Vea + 2 Fries",
+          "english_description": "Two 120 g beef burgers with tomato, lettuce, pulle...",
+          "producto_descripcion": "2X1 OIGA MIRE VEA + 2 PAPAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "2 Hamburguesa 120 gr de carne 100% de res, tomate,...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/16715f23-678d-4d5d-bb4b-b92abe842ef9.jpg",
+          "productogeneral_precio": "57900.00",
+          "productogeneral_escombo": "1",
+          "index": 0,
+          "categoria_id": "122"
+        },
+        {
+          "producto_id": 131,
+          "english_name": "Combo Monsterghetto + Fries + 250 ml Drink",
+          "english_description": "Monsterghetto burger with fries and a 250 ml drink...",
+          "producto_descripcion": "COMBO MONSTERGHETTO+PAPAS+BEBIDA250ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Hamburguesa de 120 gr de carne 100% de res, queso...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/9a8796a8-bd74-4ef1-9a60-a6d9e89f4e88.jpeg",
+          "productogeneral_precio": "28500.00",
+          "productogeneral_escombo": "1",
+          "index": 0,
+          "categoria_id": "122"
+        },
+        {
+          "producto_id": 136,
+          "english_name": "Combo Oiga, Mire, Vea + Fries + 250 ml Drink",
+          "english_description": "Oiga, Mire, Vea burger with fries and a 250 ml dri...",
+          "producto_descripcion": "COMBO OIGA,MIRE,VEA+PAPAS+BEBIDA 250 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Hamburguesa 120 gr de carne 100% de res, tomate, l...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/01a901d0-0fca-4a1f-ac47-ca555b5709d3.jpeg",
+          "productogeneral_precio": "38900.00",
+          "productogeneral_escombo": "1",
+          "index": 0,
+          "categoria_id": "122"
+        },
+        {
+          "producto_id": 137,
+          "english_name": "Combo Monster Realeza + Fries + 250 ml Drink",
+          "english_description": "La Realeza burger with fries and a 250 ml drink.",
+          "producto_descripcion": "COMBO MONSTERREALEZA+PAPAS+BEBIDA 250 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Hamburguesa 120 gr de carne 100% de res, queso moz...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/c78d3923-7133-43a1-88ee-0db3ee926aba.jpeg",
+          "productogeneral_precio": "42500.00",
+          "productogeneral_escombo": "1",
+          "index": 0,
+          "categoria_id": "122"
+        },
+        {
+          "producto_id": 150,
+          "english_name": "2x1 Burgermonster + 2 Fries",
+          "english_description": "Two 120 g beef burgers with caramelized onions, SM...",
+          "producto_descripcion": "2X1 BURGERMONSTER + 2 PAPAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "2 Hamburguesa 120 gr de carne 100% de res, cebolla...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/9a405418-5bd2-4871-81c7-791a46629ba7.jpg",
+          "productogeneral_precio": "49900.00",
+          "productogeneral_escombo": "1",
+          "index": 0,
+          "categoria_id": "122"
+        },
+        {
+          "producto_id": 109,
+          "english_name": "Burgermonster",
+          "english_description": "120 g beef burger with caramelized onions, SM ranc...",
+          "producto_descripcion": "BURGUERMONSTER",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/1a63a421-7fe4-4f3b-9895-50e4883d1831.jpeg",
+          "productogeneral_precio": "26900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "122",
+          "lista_presentacion": [
+            {
+              "producto_id": "109",
+              "producto_precio": "26900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/cb6b9197-645d-4d74-a15d-7f5c0de78a51.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 106,
+          "english_name": "Monster Ghetto",
+          "english_description": "120 g beef burger with mozzarella, street-style po...",
+          "producto_descripcion": "MONSTER GHETTO",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/2bf993dc-63a2-45de-844a-ead2d134e936.jpeg",
+          "productogeneral_precio": "20900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "122",
+          "lista_presentacion": [
+            {
+              "producto_id": "106",
+              "producto_precio": "20900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/75200846-c2e7-4b63-a551-0788952f1426.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 112,
+          "english_name": "Monster Realeza",
+          "english_description": "120 g beef burger with mozzarella, tomato, lettuce...",
+          "producto_descripcion": "MONSTER REALEZA",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Hamburguesa 120 gr de carne 100% de res, queso moz...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/f575c988-e5bd-450f-b805-f7eb68052c89.jpeg",
+          "productogeneral_precio": "35900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "122",
+          "lista_presentacion": [
+            {
+              "producto_id": "112",
+              "producto_precio": "35900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/fa80e021-4d07-4d47-ae31-94dde3ef2202.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 111,
+          "english_name": "Oiga, Mire, Vea",
+          "english_description": "120 g beef burger with tomato, lettuce, pulled bee...",
+          "producto_descripcion": "OIGA, MIRE, VEA",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/c73ae309-1479-40e7-a6ca-8be84efa344a.jpeg",
+          "productogeneral_precio": "31900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "122",
+          "lista_presentacion": [
+            {
+              "producto_id": "111",
+              "producto_precio": "31900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/afddf917-1ab3-4393-888a-13217ec34cbc.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria_id": "125",
+      "english_name": "Family Deal",
+      "categoria_descripcion": "PROMO FAMILIAR",
+      "categoria_color": "#e74c3c",
+      "index": 6,
+      "visible": true,
+      "products": [
+        {
+          "producto_id": 454,
+          "english_name": "Mixed Platter for 3 + 3 Free Drinks",
+          "english_description": "Platter for 3 with French fries, Premium SM sausag...",
+          "producto_descripcion": "PICADA PA 3 - 4 PERSONAS + 3 BEBIDAS 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Picada para 3 - 4 Personas 2209 gr,Papa Amarilla,S...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/c62ee11c-24e7-4833-9ea9-e32a3eb47d5a.jpg",
+          "productogeneral_precio": "112900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "125",
+          "lista_presentacion": [
+            {
+              "producto_id": "454",
+              "producto_precio": "112900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/0342d614-51f3-4801-9adf-6ca9fabbc3b6.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 142,
+          "english_name": "Mixed Platter for 3",
+          "english_description": "Platter for 3 with French fries, Premium SM sausag...",
+          "producto_descripcion": "PICADA PA 3-4 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Picada para 3 Personas 2209 gr ,Papa Amarilla,Salc...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/d0da976c-dc8c-4365-98c3-d138234688fb.png",
+          "productogeneral_precio": "112900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "125",
+          "lista_presentacion": [
+            {
+              "producto_id": "142",
+              "producto_precio": "112900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/eb9739cb-097f-4514-8e26-32d46457413a.png",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 457,
+          "english_name": "SalchiMonster for 6 + Free 1.5 L Soda",
+          "english_description": "Salchipapa for 6 with French fries, Premium SM sau...",
+          "producto_descripcion": "SALCHIMONSTER PARA 6 PERSONAS +1,5 LT GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa para 6 HAMBRIENTOS 3529 gr ,Papa Amaril...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/7ef3651a-9df8-4c6f-900d-65357ea1f72a.jpg",
+          "productogeneral_precio": "137900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "125",
+          "lista_presentacion": [
+            {
+              "producto_id": "457",
+              "producto_precio": "137900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/96e909e6-25c6-44d3-805c-e91018e1da00.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": "SALCHIMONSTER PARA 6 PERS+1.5LT GRATIS"
+            }
+          ]
+        },
+        {
+          "producto_id": 42,
+          "english_name": "SalchiMonster for 6 People",
+          "english_description": "Salchipapa for 6 with French fries, Premium SM sau...",
+          "producto_descripcion": "SALCHIMONSTER PARA 6-8 PERSONAS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa para 6 HAMBRIENTOS 3529 gr,Papa Amarill...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/b9d7151f-67ab-414f-b01a-f99c28008697.jpg",
+          "productogeneral_precio": "137900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "125",
+          "lista_presentacion": [
+            {
+              "producto_id": "42",
+              "producto_precio": "137900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/7807fe00-7ab0-4f0d-bf42-ad05743e9480.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria_id": "135",
+      "english_name": "",
+      "categoria_descripcion": "PATACONES Y MADUROS",
+      "categoria_color": "#e74c3c",
+      "index": 7,
+      "visible": true,
+      "products": [
+        {
+          "producto_id": 480,
+          "english_name": "",
+          "english_description": "",
+          "producto_descripcion": "MADURO CHICHARRON PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/55d19210-4b54-4dd5-87ee-ddae04520956.jpg",
+          "productogeneral_precio": "29900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "135",
+          "lista_presentacion": [
+            {
+              "producto_id": "480",
+              "producto_precio": "29900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/be95ace5-45cf-474f-b7c0-06e6b41b496f.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 484,
+          "english_name": "",
+          "english_description": "",
+          "producto_descripcion": "PATACON MIXTO PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/d6936d24-59ea-4932-8dda-8ab12f54f68a.jpg",
+          "productogeneral_precio": "26900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "135",
+          "lista_presentacion": [
+            {
+              "producto_id": "484",
+              "producto_precio": "26900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/33644d24-dcf8-4762-a3a4-b0dbd76c6955.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 483,
+          "english_name": "",
+          "english_description": "",
+          "producto_descripcion": "PATACON CHICHARRON & COSTILLA PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/2b966375-0902-47fd-a863-eae81f7cfa97.jpg",
+          "productogeneral_precio": "39900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "135",
+          "lista_presentacion": [
+            {
+              "producto_id": "483",
+              "producto_precio": "39900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/bdc8ce72-51fd-4a1b-9a17-3f6d340c26f4.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 481,
+          "english_name": "",
+          "english_description": "",
+          "producto_descripcion": "MADURO MIXTO PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/e8ace3a0-0d38-4170-88b5-6d98a9d12425.jpg",
+          "productogeneral_precio": "26900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "135",
+          "lista_presentacion": [
+            {
+              "producto_id": "481",
+              "producto_precio": "26900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/dc488c57-6416-4a34-adfc-b114904656e0.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 482,
+          "english_name": "",
+          "english_description": "",
+          "producto_descripcion": "PATACON POLLO & CHORIZO PERSONAL",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/c6445a68-219d-4a64-8965-e73020d2b6fa.jpg",
+          "productogeneral_precio": "27900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "135",
+          "lista_presentacion": [
+            {
+              "producto_id": "482",
+              "producto_precio": "27900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/16473245-d6ca-4831-9808-211cb7b160d3.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 479,
+          "english_name": "",
+          "english_description": "",
+          "producto_descripcion": "MADURO CLASICO PERSONAL",
+          "discount_amount": 0.0,
+          "discount_percent": 0.0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/719b63c6-1572-4b46-9486-9f50cca0da4a.jpg",
+          "productogeneral_precio": "13900.00",
+          "productogeneral_escombo": "0",
+          "index": 999,
+          "categoria_id": "135",
+          "lista_presentacion": [
+            {
+              "producto_id": "479",
+              "producto_precio": "13900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/907f985d-f3dd-4488-93ac-4b9302ca82a9.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria_id": "4",
+      "english_name": "SM Beverages",
+      "categoria_descripcion": "BEBIDAS SM",
+      "categoria_color": "#637a91",
+      "index": 8,
+      "visible": true,
+      "products": [
+        {
+          "producto_id": 379,
+          "english_name": "Cherry Lemonade 12 oz",
+          "english_description": "Cherry lemonade, 12 oz.",
+          "producto_descripcion": "LIMONADA DE CEREZA 12 ONZ",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "LIMONADA DE CEREZA 12 ONZ",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productos/2c1df194-a0e1-4bb8-9d84-10c99752e8b7.jpg",
+          "productogeneral_precio": "11000.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "379",
+              "producto_precio": "11000.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/2c1df194-a0e1-4bb8-9d84-10c99752e8b7.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 380,
+          "english_name": "Coconut Lemonade 12 oz",
+          "english_description": "Coconut lemonade, 12 oz.",
+          "producto_descripcion": "LIMONADA DE COCO 12 ONZ",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "LIMONADA DE COCO 12 ONZ",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productos/37000b13-ce9d-4fa5-95a5-2b743ad60b9a.jpg",
+          "productogeneral_precio": "11000.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "380",
+              "producto_precio": "11000.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/37000b13-ce9d-4fa5-95a5-2b743ad60b9a.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 18,
+          "english_name": "Mango Juice 500 ml",
+          "english_description": "Fresh mango juice, 500 ml.",
+          "producto_descripcion": "JUGO DE MANGO 500 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "JUGO DE MANGO 500 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/a3cbfe9b-2ede-4239-a3e3-4c511d8f181e.png",
+          "productogeneral_precio": "9900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "18",
+              "producto_precio": "9900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/67752623-72a7-4219-9d28-303e07cb5d81.png",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 11,
+          "english_name": "Brisa Water 600 ml",
+          "english_description": "Brisa water, 600 ml.",
+          "producto_descripcion": "AGUA BRISA 600 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "AGUA BRISA 600 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productos/bc4e98ad-d833-441a-98b7-ff7627a8e648.webp",
+          "productogeneral_precio": "4900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "11",
+              "producto_precio": "4900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/products/1d5f9ba8-cb77-4392-99f9-76a969883f19.webp",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 25,
+          "english_name": "Budweiser 269 ml",
+          "english_description": "Budweiser beer, 269 ml.",
+          "producto_descripcion": "BUDWEISER 269 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "BUDWEISER 269 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productos/4752807d-c2c4-4d15-ab58-f010e9d14259.webp",
+          "productogeneral_precio": "9900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "25",
+              "producto_precio": "9900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/products/06ec99ef-d2f6-4157-9da9-b60330520874.png",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 13,
+          "english_name": "Coca-Cola Original 400 ml",
+          "english_description": "Coca-Cola Original, 400 ml.",
+          "producto_descripcion": "COCA COLA SABOR ORIGINAL 400 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "COCA COLA SABOR ORIGINAL 400 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productos/491ad643-359d-4bbb-9834-68aa1d432339.webp",
+          "productogeneral_precio": "5900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "13",
+              "producto_precio": "5900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/products/d4a326f0-5caf-4715-91a0-6571765d654e.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 12,
+          "english_name": "Coca-Cola 1.5 L",
+          "english_description": "Coca-Cola, 1.5 liters.",
+          "producto_descripcion": "COCACOLA 1,5 LITROS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "COCACOLA 1,5 LITROS",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productos/be37c1f8-9e6c-41c4-b059-b39300a22338.webp",
+          "productogeneral_precio": "9900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "12",
+              "producto_precio": "9900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/products/ba2a099b-73c8-4814-8cb7-ad4336f30d3d.webp",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 161,
+          "english_name": "Coca-Cola Zero 1.5 L",
+          "english_description": "Coca-Cola Zero Sugar, 1.5 liters.",
+          "producto_descripcion": "COCACOLA ZERO  1,5 LITROS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "COCACOLA ZERO  1,5 LITROS",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/b86180e9-dc37-4dec-9c0f-7aa9ac9687e2.png",
+          "productogeneral_precio": "9900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "161",
+              "producto_precio": "9900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/39df6606-8926-4cdb-bf1b-38a92d6370e2.png",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 14,
+          "english_name": "Coca-Cola Zero 400 ml",
+          "english_description": "Coca-Cola Zero Sugar, 400 ml.",
+          "producto_descripcion": "COCACOLA ZERO 400 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "COCACOLA ZERO 400 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productos/4f2da33b-720e-4364-848c-7df6998ee8a1.webp",
+          "productogeneral_precio": "5900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "14",
+              "producto_precio": "5900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/products/9c57119e-2a95-4816-bc7f-3d9b423d184b.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 366,
+          "english_name": "Coca-Cola Zero Mini 250 ml",
+          "english_description": "Coca-Cola Zero Sugar mini, 250 ml.",
+          "producto_descripcion": "COCACOLA ZERO MINI 250 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "COCACOLA ZERO MINI 250 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/fed5800c-d639-432c-83f8-54db31da351b.png",
+          "productogeneral_precio": "2500.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "366",
+              "producto_precio": "2500.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/bb14a2fa-96a7-4022-b141-6e3f8d7d56ee.png",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 26,
+          "english_name": "Corona 310 ml",
+          "english_description": "Corona beer, 310 ml.",
+          "producto_descripcion": "CORONA 310 ml",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "CORONA 310 ml",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productos/72a0447d-8d53-48c0-b063-123fdfb41e1c.webp",
+          "productogeneral_precio": "10900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "26",
+              "producto_precio": "10900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/products/f19ad6a5-aa68-4ed7-bac2-18adc3c44ff4.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 231,
+          "english_name": "Fresh Citrus Juice 188 ml",
+          "english_description": "Fresh Citrus juice, 188 ml.",
+          "producto_descripcion": "JUGO FRESH CITRUS 188 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "JUGO FRESH CITRUS 188 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/c79afd28-b103-4eca-81ed-352483de101e.png",
+          "productogeneral_precio": "0.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "231",
+              "producto_precio": "0.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/7935174f-f63b-42eb-9b82-1a7605441429.png",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 230,
+          "english_name": "Tropical Mango Juice 188 ml",
+          "english_description": "Tropical Mango juice, 188 ml.",
+          "producto_descripcion": "JUGO FRUTAL MANGO 188 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "JUGO FRUTAL MANGO 188 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/450d1c52-ede5-41d1-932f-47362a6724ed.jpg",
+          "productogeneral_precio": "0.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "230",
+              "producto_precio": "0.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/cc336702-1df8-40e0-b995-71551d46c6fb.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 228,
+          "english_name": "Tropical Blackberry Juice 188 ml",
+          "english_description": "Tropical Blackberry juice, 188 ml.",
+          "producto_descripcion": "JUGO FRUTAL MORA 188 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "JUGO FRUTAL MORA 188 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/529932d4-8b6a-4054-915f-275c64fec035.png",
+          "productogeneral_precio": "0.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "228",
+              "producto_precio": "0.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/b210e926-cb8d-4747-8195-c6c2841a683c.png",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 229,
+          "english_name": "Tropical Fruit Mix Juice 188 ml",
+          "english_description": "Tropical Salpicón juice, 188 ml.",
+          "producto_descripcion": "JUGO FRUTAL SALPICON 188 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "JUGO FRUTAL SALPICON 188 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/2f4fd1e1-8a0f-49df-848b-cbe8fe82f57c.png",
+          "productogeneral_precio": "0.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "229",
+              "producto_precio": "0.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/24171c9c-5b0c-4c97-91f2-b337019e8644.png",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 159,
+          "english_name": "Premio (Kola Román) 1.5 L",
+          "english_description": "Premio (Kola Román), 1.5 liters.",
+          "producto_descripcion": "PREMIO -KOLA ROMAN  1,5 LITROS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "PREMIO -KOLA ROMAN  1,5 LITROS",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/f461519f-da42-4c38-b727-b7ac4243da3a.png",
+          "productogeneral_precio": "9900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "159",
+              "producto_precio": "9900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/c095a5de-dd5e-4f56-b0a5-ab2d195477b6.png",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 160,
+          "english_name": "Quatro 1.5 L",
+          "english_description": "Quatro soda, 1.5 liters.",
+          "producto_descripcion": "QUATRO 1,5 LITROS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "QUATRO 1,5 LITROS",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/dc9ce64a-e442-4706-9c0b-2d5d821d4041.png",
+          "productogeneral_precio": "9900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "160",
+              "producto_precio": "9900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/25045594-45a2-4324-8f6a-d2e7f82ecc6a.png",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 23,
+          "english_name": "Quatro 400 ml",
+          "english_description": "Quatro soda, 400 ml.",
+          "producto_descripcion": "QUATRO 400 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "QUATRO 400 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productos/87d77808-036d-4e73-b9fb-50e3fd78a526.webp",
+          "productogeneral_precio": "5900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "23",
+              "producto_precio": "5900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/products/30454723-c01f-4adf-8627-034c3a4e38e4.webp",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 162,
+          "english_name": "Sprite 1.5 L",
+          "english_description": "Sprite, 1.5 liters.",
+          "producto_descripcion": "SPRITE 1,5 LITROS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "SPRITE 1,5 LITROS",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/7587b7f9-786d-4435-a269-f489789d0152.png",
+          "productogeneral_precio": "9900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "162",
+              "producto_precio": "9900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/0a1ce738-55da-4811-9191-35fa69bb5672.png",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 24,
+          "english_name": "Sprite 400 ml",
+          "english_description": "Sprite, 400 ml.",
+          "producto_descripcion": "SPRITE 400 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "SPRITE 400 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productos/68768441-5e8f-4a8d-8c68-dddf782faba4.webp",
+          "productogeneral_precio": "5900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "24",
+              "producto_precio": "5900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/products/01922c6b-bdda-447c-ba15-5e55c9be817f.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 19,
+          "english_name": "Passion Fruit Juice 500 ml",
+          "english_description": "Fresh passion fruit juice, 500 ml.",
+          "producto_descripcion": "JUGO DE MARACUYA 500 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "JUGO DE MARACUYA 500 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/5256982f-072d-4a96-9eb4-4407df07d3a5.png",
+          "productogeneral_precio": "9900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "19",
+              "producto_precio": "9900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/df1ed7bc-5d96-4dd6-8700-bc3cc30da9d3.png",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 22,
+          "english_name": "Premio (Kola Román) 400 ml",
+          "english_description": "Premio (Kola Román), 400 ml.",
+          "producto_descripcion": "PREMIO - KOLA ROMAN 400 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "PREMIO 400 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productos/43288d8e-908a-4060-826d-6722da8583f0.webp",
+          "productogeneral_precio": "5900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "22",
+              "producto_precio": "5900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/products/c05f91b7-9c05-4182-9196-b421a992e05b.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 16,
+          "english_name": "Lulo Juice 500 ml",
+          "english_description": "Fresh lulo (naranjilla) juice, 500 ml.",
+          "producto_descripcion": "JUGO DE LULO  500 ML",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "JUGO DE LULO  500 ML",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/d78b6a26-38a2-4e87-a6eb-a5b08abbdbfa.png",
+          "productogeneral_precio": "9900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "16",
+              "producto_precio": "9900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/c55f19dc-7047-4c8e-aee7-f992fc445928.png",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 381,
+          "english_name": "Green Mango Lemonade 12 oz",
+          "english_description": "Unripe mango (biche) lemonade, 12 oz.",
+          "producto_descripcion": "LIMONADA DE MANGO BICHE 12 ONZ",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "LIMONADA DE MANGO BICHE 12 ONZ",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productos/f208fe30-de9b-4b14-ba94-31a2035dbe11.jpg",
+          "productogeneral_precio": "11000.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "4",
+          "lista_presentacion": [
+            {
+              "producto_id": "381",
+              "producto_precio": "11000.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/f208fe30-de9b-4b14-ba94-31a2035dbe11.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria_id": "123",
+      "english_name": "SM Cones",
+      "categoria_descripcion": "CONOS SM",
+      "categoria_color": "#e74c3c",
+      "index": 9,
+      "visible": true,
+      "products": [
+        {
+          "producto_id": 358,
+          "english_name": "Classic MonsterCone + Free Drink",
+          "english_description": "Cone for 1 with yellow potatoes and Premium sausag...",
+          "producto_descripcion": "CLASIC MONSTERCONO + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Cono personal 365 gr ,Papa Amarilla, Sa...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/76221033-a48f-4328-8be7-4c71d5e3092e.jpeg",
+          "productogeneral_precio": "16900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "123",
+          "lista_presentacion": [
+            {
+              "producto_id": "358",
+              "producto_precio": "16900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/4d325f14-51cb-46c6-ad33-a3217cc75df4.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 360,
+          "english_name": "Costi MonsterCone + Free Drink",
+          "english_description": "Cone for 1 with yellow potatoes and boneless smoke...",
+          "producto_descripcion": "COSTI MONSTERCONO + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Cono personal 388 gr,Papa amarilla,Cost...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/997af927-053e-417e-b5d4-4a6d8604c523.jpeg",
+          "productogeneral_precio": "24900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "123",
+          "lista_presentacion": [
+            {
+              "producto_id": "360",
+              "producto_precio": "24900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/688e3f39-46ae-409c-9e1c-fe7439e65fea.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 362,
+          "english_name": "Mixed MonsterCone + Free Drink",
+          "english_description": "Cone for 1 with yellow potatoes, pulled beef in Ho...",
+          "producto_descripcion": "MONSTERCONO MIXTO + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Cono personal 473 gr, Papa Amarilla, Ca...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/24dd240c-6211-41eb-9916-5c69687a6e87.jpeg",
+          "productogeneral_precio": "28900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "123",
+          "lista_presentacion": [
+            {
+              "producto_id": "362",
+              "producto_precio": "28900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/9df443e0-77b8-4de6-bde2-344f692745f6.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 361,
+          "english_name": "Polli MonsterCone + Free Drink",
+          "english_description": "Cone for 1 with yellow potatoes and crunchy chicke...",
+          "producto_descripcion": "POLLI MONSTERCONO + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Cono personal 371 gr, Papa Amarilla, Po...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/b6de4190-4d9f-4362-86ab-619dcf081000.jpeg",
+          "productogeneral_precio": "26900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "123",
+          "lista_presentacion": [
+            {
+              "producto_id": "361",
+              "producto_precio": "26900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/3dec9df4-013b-42a3-969c-2f3df16071ae.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 367,
+          "english_name": "Porky MonsterCone + Free Drink",
+          "english_description": "Cone for 1 with yellow potatoes, chunky pork rind...",
+          "producto_descripcion": "PORKY MONSTERCONO + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Cono personal 395 gr, Papa amarilla,Tro...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/20dd693e-b0c6-419f-8e0d-c849b7563729.jpeg",
+          "productogeneral_precio": "32900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "123",
+          "lista_presentacion": [
+            {
+              "producto_id": "367",
+              "producto_precio": "32900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/5fb12ce7-6a17-4b49-a246-093c0f0c86d7.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 359,
+          "english_name": "Samba MonsterCone + Free Drink",
+          "english_description": "Cone for 1 with yellow potatoes, sweet plantain, b...",
+          "producto_descripcion": "SAMBA MONSTERCONO + BEBIDA 250 ML GRATIS",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchipapa Cono personal 365 gr, Papa Amarilla, Ma...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/d66839e4-780d-4b33-807c-683819158205.jpeg",
+          "productogeneral_precio": "23900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "123",
+          "lista_presentacion": [
+            {
+              "producto_id": "359",
+              "producto_precio": "23900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/a030115c-8c4c-4818-a7c6-d7084b338b8b.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria_id": "12",
+      "english_name": "Birthdays",
+      "categoria_descripcion": "CUMPLEAÑOS",
+      "categoria_color": "#c25975",
+      "index": 10,
+      "visible": true,
+      "products": [
+        {
+          "producto_id": 140,
+          "english_name": "Birthday Kit Adults (6 People)",
+          "english_description": "Birthday kit for 6 adults.",
+          "producto_descripcion": "KIT CUMPLEAÑOS ADULTOS (6 PERSONAS)",
+          "discount_amount": 0.0,
+          "discount_percent": 0.0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/355f6c84-41d9-4f2c-a822-b72931b822a1.jpeg",
+          "productogeneral_precio": "304700.00",
+          "productogeneral_escombo": "1",
+          "index": 1,
+          "categoria_id": "12"
+        },
+        {
+          "producto_id": 374,
+          "english_name": "Birthday Kit Full (15 Kids)",
+          "english_description": "Full birthday kit for 15 kids.",
+          "producto_descripcion": "KIT CUMPLEAÑOS FULL (15 NIÑOS)",
+          "discount_amount": 0.0,
+          "discount_percent": 0.0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/3bef348b-d724-4487-af99-5c8449250129.jpeg",
+          "productogeneral_precio": "999900.00",
+          "productogeneral_escombo": "1",
+          "index": 2,
+          "categoria_id": "12"
+        },
+        {
+          "producto_id": 372,
+          "english_name": "Birthday Kit Basic (15 Kids)",
+          "english_description": "Basic birthday kit for 15 kids.",
+          "producto_descripcion": "KIT CUMPLEAÑOS BASICO (15 NIÑOS)",
+          "discount_amount": 0.0,
+          "discount_percent": 0.0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/334f89ee-622a-4f39-b36e-0917ba268646.jpeg",
+          "productogeneral_precio": "790900.00",
+          "productogeneral_escombo": "1",
+          "index": 3,
+          "categoria_id": "12"
+        },
+        {
+          "producto_id": 373,
+          "english_name": "Birthday Kit Medium (15 Kids)",
+          "english_description": "Medium birthday kit for 15 kids.",
+          "producto_descripcion": "KIT CUMPLEAÑOS MEDIANO (15 NIÑOS)",
+          "discount_amount": 0.0,
+          "discount_percent": 0.0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/3cc2f6bf-3c0b-4595-bdf6-6cc0e8fc8aa8.jpeg",
+          "productogeneral_precio": "890900.00",
+          "productogeneral_escombo": "1",
+          "index": 4,
+          "categoria_id": "12"
+        }
+      ]
+    },
+    {
+      "categoria_id": "14",
+      "english_name": "Salchipapa Add-ons",
+      "categoria_descripcion": "ADICIONES SALCHIPAPAS",
+      "categoria_color": "#f9845b",
+      "index": 11,
+      "visible": true,
+      "products": [
+        {
+          "producto_id": 63,
+          "english_name": "Premium Bacon 120 g",
+          "english_description": "Premium bacon, 120 g.",
+          "producto_descripcion": "BACON PREMIUM  120 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Bacon Premium  120 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/bc94d869-b775-4bdb-81ea-1e1e267bab32.jpg",
+          "productogeneral_precio": "8900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "63",
+              "producto_precio": "8900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/f53c8dde-0a95-4d9c-9267-9d6d37e94ffe.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 65,
+          "english_name": "Chunky Pork Rind with Lemon Pepper 250 g",
+          "english_description": "Crispy pork rind with lemon pepper, 250 g.",
+          "producto_descripcion": "CHICHARRON CARNUDO CON LIMON PIMIENTA 250 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Chicharron Carnudo con Limon Pimienta 250 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/63f78b5e-cb26-4970-81bd-2486b44261ca.jpg",
+          "productogeneral_precio": "19500.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "65",
+              "producto_precio": "19500.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/6e364326-85df-4627-a2e8-f6b11a63369e.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 64,
+          "english_name": "Pulled Beef in Honey BBQ 120 g",
+          "english_description": "Pulled beef in Honey BBQ sauce, 120 g.",
+          "producto_descripcion": "CARNE DESMECHADA EN SALSA BBQ HONEY 120 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Carne Desmechada en Salsa Bbq Honey 120 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/c5aacf9e-e121-48e9-898c-c09895a204ca.jpg",
+          "productogeneral_precio": "16500.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "64",
+              "producto_precio": "16500.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/2bf5d5fa-d197-4d9e-a54c-73b0f036d16f.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 66,
+          "english_name": "Pork Sausage with Lemon Pepper 150 g",
+          "english_description": "Pork sausage with lemon pepper, 150 g.",
+          "producto_descripcion": "CHORIZO DE CERDO CON LIMON PIMIENTA 150 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Chorizo de Cerdo con Limon Pimienta 150 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/d1250b95-9f04-4567-83a7-6757620d3f42.jpg",
+          "productogeneral_precio": "14000.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "66",
+              "producto_precio": "14000.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/4a6e9906-1617-4b21-b3d6-5c53645427b3.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 67,
+          "english_name": "Smoked Ribs in Honey BBQ 250 g",
+          "english_description": "Smoked ribs in Honey BBQ sauce, 250 g.",
+          "producto_descripcion": "COSTILLA AHUMADA EN SALSA BBQ HONEY 250 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Costilla Ahumada en Salsa Bbq Honey 250 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/bfe96ec1-e183-4986-ab17-cc31e1be4c4f.jpg",
+          "productogeneral_precio": "18900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "67",
+              "producto_precio": "18900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/3c4d272c-7d5c-4367-a94d-560ef4d35324.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 68,
+          "english_name": "Guacamole 80 g",
+          "english_description": "Guacamole, 80 g.",
+          "producto_descripcion": "GUACAMOLE 80 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Guacamole 80 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/ef53a4b8-750a-439f-bddf-0323e15558a5.jpg",
+          "productogeneral_precio": "6900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "68",
+              "producto_precio": "6900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/9f878f96-cb47-4e3a-876f-4e7f8fbb9942.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 69,
+          "english_name": "Sweet Plantain “Guayabo” 150 g",
+          "english_description": "Ripe sweet plantain, 150 g.",
+          "producto_descripcion": "MADURO GUAYABO 150 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Maduro Guayabo 150 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/a840d3b4-b837-4e86-bf92-9261fc4072c2.jpg",
+          "productogeneral_precio": "5900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "69",
+              "producto_precio": "5900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/d79382ea-97ff-437a-9c08-ca43864a8d4c.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 70,
+          "english_name": "Corn 120 g",
+          "english_description": "Sweet corn, 120 g.",
+          "producto_descripcion": "MAIZ 120 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Maiz 120 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/fc84cb83-7767-4539-911b-91f42110d9e4.jpg",
+          "productogeneral_precio": "5900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "70",
+              "producto_precio": "5900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/0aaf6de8-e639-4798-ba86-5b29bfb98cf7.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 71,
+          "english_name": "Criolla Potatoes 450 g",
+          "english_description": "Colombian criolla potatoes, 450 g.",
+          "producto_descripcion": "PAPA CRIOLLA 450 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Papa Criolla 450 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/b2f5996d-2758-4de9-af39-1fc3bb366177.jpeg",
+          "productogeneral_precio": "6600.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "71",
+              "producto_precio": "6600.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/d882112f-03b8-44d6-8329-459a2f7f1283.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 72,
+          "english_name": "French Fries 450 g",
+          "english_description": "French fries, 450 g.",
+          "producto_descripcion": "PAPA FRANCESA 450 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Papa Francesa 450 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/5d0bc4f4-350f-44a3-87fe-a7b9d81ec562.jpg",
+          "productogeneral_precio": "7700.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "72",
+              "producto_precio": "7700.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/96cd9a59-e9ee-4ad7-af0e-e2e58350d5fa.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 73,
+          "english_name": "Pico de Gallo 50 g",
+          "english_description": "Fresh pico de gallo, 50 g.",
+          "producto_descripcion": "PICO E´ GALLO 50 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Pico e´ Gallo 50 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/d61198ae-bc27-4c5f-92e6-8279fb6cff7d.jpg",
+          "productogeneral_precio": "3500.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "73",
+              "producto_precio": "3500.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/ca6d805f-a6fb-4768-96a3-eb445e248edf.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 74,
+          "english_name": "Crunchy Chicken in Orange Sauce 200 g",
+          "english_description": "Crispy chicken in orange sauce, 200 g.",
+          "producto_descripcion": "POLLO  CRUNCH EN SALSA A LA NARANJA 200 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Pollo  Crunch en Salsa a la Naranja 200 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/d0a2531b-7bd1-4c47-888e-5808e7f9749a.jpg",
+          "productogeneral_precio": "15500.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "74",
+              "producto_precio": "15500.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/e223a46f-bb79-47bd-b252-8145d1b76678.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 75,
+          "english_name": "Pulled Chicken with Chimichurri 150 g",
+          "english_description": "Pulled chicken with chimichurri, 150 g.",
+          "producto_descripcion": "POLLO DESMECHADO CON CHIMICHURRI 150 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Pollo Desmechado con Chimichurri 150 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/a1047f79-eede-48f7-ae91-0c44181121f4.jpg",
+          "productogeneral_precio": "16500.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "75",
+              "producto_precio": "16500.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/6bdc17db-97b5-49d9-9f34-b8753472007e.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 96,
+          "english_name": "ChocoMonster Dessert",
+          "english_description": "Single-serve dessert: battered Chocorramo pieces w...",
+          "producto_descripcion": "POSTRE CRUSHETO",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Postre: Torta de chocolate con helado de fresa, sa...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/05e476fd-69f8-410a-bcf0-0a3e2579b69b.jpg",
+          "productogeneral_precio": "9900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "96",
+              "producto_precio": "9900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/f8f24739-55dc-4a42-98db-5b3ff70d3edd.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 76,
+          "english_name": "Mozzarella 144 g",
+          "english_description": "Mozzarella cheese, 144 g.",
+          "producto_descripcion": "QUESO MOZARELLA 144 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Queso Mozarella 144 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/ba0751f1-4883-4f84-b5e4-4924ee1858a3.jpeg",
+          "productogeneral_precio": "6600.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "76",
+              "producto_precio": "6600.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/8861ba2e-1242-4757-9abd-6d08fc115cf2.jpeg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 77,
+          "english_name": "Potato Ripio 55 g",
+          "english_description": "Crispy shredded potato bits (ripio), 55 g.",
+          "producto_descripcion": "RIPIO DE PAPA 55 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Ripio de Papa 55 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/5e98f787-0ca0-4c3d-8b89-1d872a76153a.jpg",
+          "productogeneral_precio": "4900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "77",
+              "producto_precio": "4900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/260ec543-1ac8-40f4-9693-f425707897d7.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 78,
+          "english_name": "Premium SM Sausage 250 g",
+          "english_description": "Premium SM sausage, 250 g.",
+          "producto_descripcion": "SALCHICHA PREMIUM 250 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchicha Premium 250 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/338018fb-c063-4f38-bb27-ed48de2bfe10.jpg",
+          "productogeneral_precio": "8900.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "78",
+              "producto_precio": "8900.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/cc8b7af8-9ec1-4e72-896f-2ac4f4280ccc.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 79,
+          "english_name": "SM Ranch Sausage 250 g",
+          "english_description": "SM ranch-style sausage, 250 g.",
+          "producto_descripcion": "SALCHICHA RANCHERA 250 GR",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Salchicha Ranchera 250 gr",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/4e626a07-ae9a-4618-85f6-db996947dd19.jpg",
+          "productogeneral_precio": "20000.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "79",
+              "producto_precio": "20000.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/06293c9d-77f9-4011-ad7a-908d2e4b0785.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 59,
+          "english_name": "Show Pork Rind × 450 g",
+          "english_description": "Table-side “Show” with chunky pork rind, 450 g — f...",
+          "producto_descripcion": "SHOW CHICHARRON x 450 gr",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/c3cfa1d0-2711-4603-9034-1f31bcffb4c0.jpg",
+          "productogeneral_precio": "35000.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "59",
+              "producto_precio": "35000.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/979cedee-d41d-4a62-bc7f-5ce2ed9d1f14.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        },
+        {
+          "producto_id": 58,
+          "english_name": "Show Mega Cheese × 400 g",
+          "english_description": "Table-side “Show” with melted cheese, 400 g — for...",
+          "producto_descripcion": "SHOW MEGA QUESO x 400 gr",
+          "discount_amount": 0,
+          "discount_percent": 0,
+          "productogeneral_descripcionadicional": "Show de Queso 400 gr , Para  la mesa o para domici...",
+          "productogeneral_urlimagen": "salchimonsterrestaurantpe/productogeneral/8c43321b-9852-42b9-bef2-bb37c0129e93.jpg",
+          "productogeneral_precio": "19500.00",
+          "productogeneral_escombo": "0",
+          "index": 0,
+          "categoria_id": "14",
+          "lista_presentacion": [
+            {
+              "producto_id": "58",
+              "producto_precio": "19500.00",
+              "producto_urlimagen": "salchimonsterrestaurantpe/productos/25bbfe2d-b11f-422c-9267-891da85e5b1c.jpg",
+              "producto_estado": "Activo",
+              "producto_presentacion": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria_id": "126",
+      "english_name": "Wings",
+      "categoria_descripcion": "ALAS",
+      "categoria_color": "#e74c3c",
+      "index": 13,
+      "visible": true,
+      "products": []
+    },
+    {
+      "categoria_id": "20",
+      "english_name": "Salchimonster Colombia",
+      "categoria_descripcion": "SALCHIMONSTER COL",
+      "categoria_color": "#e74c3c",
+      "index": 14,
+      "visible": true,
+      "products": []
+    }
+  ]
+}
