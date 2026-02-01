@@ -196,12 +196,11 @@ class CuponeraUserCreate(BaseModel):
         # Obtener phone_code del contexto de validación
         phone_code = info.data.get('phone_code', '+57')
         
-        # Extraer código de país (ej. "+57" -> "CO", "+1" -> "US")
         try:
-            # Parsear teléfono con el código de país
-            parsed = phonenumbers.parse(phone_cleaned, None)
-            # Si el phone no tiene código, añadirle el phone_code
-            if not phone_cleaned.startswith('+'):
+            # Si ya tiene +, parsear en formato E.164; si no, anteponer phone_code
+            if phone_cleaned.startswith('+'):
+                parsed = phonenumbers.parse(phone_cleaned, None)
+            else:
                 parsed = phonenumbers.parse(f"{phone_code}{phone_cleaned}", None)
             
             if not phonenumbers.is_valid_number(parsed):
@@ -264,8 +263,9 @@ class CuponeraUserUpdate(BaseModel):
             return phone_cleaned
         
         try:
-            parsed = phonenumbers.parse(phone_cleaned, None)
-            if not phone_cleaned.startswith('+'):
+            if phone_cleaned.startswith('+'):
+                parsed = phonenumbers.parse(phone_cleaned, None)
+            else:
                 parsed = phonenumbers.parse(f"{phone_code}{phone_cleaned}", None)
             
             if not phonenumbers.is_valid_number(parsed):
