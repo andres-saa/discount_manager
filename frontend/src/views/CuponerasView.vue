@@ -231,8 +231,11 @@ function goToToday() {
 
 function selectedDateLabel(): string {
   if (!selectedDateKey.value) return ''
-  const [y, m, d] = selectedDateKey.value.split('-').map(Number)
-  const date = new Date(y, m - 1, d)
+  const parts = selectedDateKey.value.split('-').map(Number)
+  const y = parts[0] ?? 0
+  const m = (parts[1] ?? 1) - 1
+  const d = parts[2] ?? 1
+  const date = new Date(y, m, d)
   return date.toLocaleDateString('es-CO', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })
 }
 
@@ -267,7 +270,7 @@ function openEdit(row: Record<string, unknown>) {
     name: (row.name as string) || '',
     description: (row.description as string) || null,
     uses_per_day: (row.uses_per_day as number) ?? 1,
-    calendar: { ...(row.calendar as Record<string, string[]>) } || {},
+    calendar: { ...((row.calendar as Record<string, string[]>) || {}) },
     site_ids: (row.site_ids as number[] | null) ?? null,
     active: (row.active as boolean) ?? true,
     folder: (row.folder as string) ?? '',

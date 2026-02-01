@@ -12,6 +12,42 @@ import Message from 'primevue/message'
 import { useToast } from 'primevue/usetoast'
 import { api } from '../api'
 
+/** Tipos para el formulario de descuento (params/conditions/limits con campos usados por InputNumber y Dropdown) */
+interface FreeItemParams {
+  mode?: string
+  product_id?: string
+}
+interface RequiresPurchase {
+  type?: string
+  min_subtotal?: number | null
+  min_qty?: number | null
+  buy_x?: number | null
+}
+interface DiscountParams {
+  pct?: number | null
+  amount?: number | null
+  free_item?: FreeItemParams
+  m?: number | null
+  n?: number | null
+  x?: number | null
+  y?: number | null
+  y_discount_pct?: number | null
+  [key: string]: unknown
+}
+interface DiscountConditions {
+  min_subtotal?: number | null
+  requires_purchase?: RequiresPurchase
+  min_qty_in_category?: number | null
+  min_subtotal_in_category?: number | null
+  [key: string]: unknown
+}
+interface DiscountLimits {
+  max_discount_amount?: number | null
+  max_free_qty?: number | null
+  max_groups?: number | null
+  [key: string]: unknown
+}
+
 const toast = useToast()
 
 const discounts = ref<Array<Record<string, unknown>>>([])
@@ -21,17 +57,28 @@ const loading = ref(true)
 const dialogVisible = ref(false)
 const editingId = ref<string | null>(null)
 const error = ref('')
-const form = ref({
+const form = ref<{
+  type: string
+  name: string
+  priority: number
+  scope: { scope_type: string; category_ids: string[]; product_ids: string[]; exclude_category_ids: string[]; exclude_product_ids: string[] }
+  conditions: DiscountConditions
+  params: DiscountParams
+  limits: DiscountLimits
+  selection_rule: string
+  site_ids: number[] | null
+  folder: string
+}>({
   type: 'CART_PERCENT_OFF',
   name: '',
   priority: 0,
-  scope: { scope_type: 'ALL_ITEMS', category_ids: [] as string[], product_ids: [] as string[], exclude_category_ids: [] as string[], exclude_product_ids: [] as string[] },
-  conditions: {} as Record<string, unknown>,
-  params: {} as Record<string, unknown>,
-  limits: {} as Record<string, unknown>,
+  scope: { scope_type: 'ALL_ITEMS', category_ids: [], product_ids: [], exclude_category_ids: [], exclude_product_ids: [] },
+  conditions: {},
+  params: {},
+  limits: {},
   selection_rule: 'CHEAPEST_UNITS',
-  site_ids: null as number[] | null,
-  folder: '' as string,
+  site_ids: null,
+  folder: '',
 })
 
 // Opciones para selects (validadas por backend)
@@ -177,8 +224,9 @@ async function loadProductOptions(searchQ?: string) {
   try {
     const q = searchQ ?? productFilterQuery.value
     let ids: string[] = form.value.scope.product_ids?.length ? [...form.value.scope.product_ids] : []
-    if (form.value.type === 'FREE_ITEM' && form.value.params.free_item?.product_id)
-      ids = [...new Set([...ids, form.value.params.free_item.product_id])]
+    const freeItem = form.value.params.free_item
+    if (form.value.type === 'FREE_ITEM' && freeItem?.product_id)
+      ids = [...new Set([...ids, freeItem.product_id])]
     const idsParam = ids.length ? ids : undefined
     const res = await api.menus.products({
       site_ids: form.value.site_ids ?? null,
@@ -278,18 +326,15 @@ function openEdit(row: Record<string, unknown>) {
       exclude_category_ids: [...(scope.exclude_category_ids as string[]) || []],
       exclude_product_ids: [...(scope.exclude_product_ids as string[]) || []],
     },
-    conditions: { ...(row.conditions as object) } as Record<string, unknown> || {},
-    params: { ...(row.params as object) } as Record<string, unknown> || {},
-    limits: { ...(row.limits as object) } as Record<string, unknown> || {},
+    conditions: (row.conditions && typeof row.conditions === 'object') ? { ...(row.conditions as Record<string, unknown>) } as DiscountConditions : {},
+    params: (row.params && typeof row.params === 'object') ? { ...(row.params as Record<string, unknown>) } as DiscountParams : {},
+    limits: (row.limits && typeof row.limits === 'object') ? { ...(row.limits as Record<string, unknown>) } as DiscountLimits : {},
     selection_rule: (row.selection_rule as string) || 'CHEAPEST_UNITS',
     site_ids: (row.site_ids as number[] | null) ?? null,
     folder: (row.folder as string) ?? '',
   }
   if (form.value.type === 'CATEGORY_PERCENT_OFF') form.value.scope.scope_type = 'CATEGORY_IDS'
-  if (form.value.type === 'FREE_ITEM') {
-    form.value.params.free_item = form.value.params.free_item || { mode: 'CHEAPEST_IN_SCOPE' }
-    form.value.conditions.requires_purchase = form.value.conditions.requires_purchase || { type: 'NONE' }
-  }
+  ensureFreeItemAndRequiresPurchase()
   categoryOptions.value = []
   productOptions.value = []
   productFilterQuery.value = ''
@@ -364,7 +409,16 @@ async function remove(id: string) {
   }
 }
 
+function ensureFreeItemAndRequiresPurchase() {
+  if (form.value.type !== 'FREE_ITEM') return
+  if (!form.value.params.free_item) form.value.params.free_item = { mode: 'CHEAPEST_IN_SCOPE' }
+  if (!form.value.conditions.requires_purchase) form.value.conditions.requires_purchase = { type: 'NONE' }
+}
+
+watch(() => form.value.type, () => ensureFreeItemAndRequiresPurchase())
+
 function onDialogShow() {
+  ensureFreeItemAndRequiresPurchase()
   if (form.value.scope.scope_type === 'CATEGORY_IDS') loadCategoryOptions()
   if (form.value.scope.scope_type === 'PRODUCT_IDS' || form.value.type === 'FREE_ITEM') loadProductOptions()
 }
@@ -509,33 +563,33 @@ onMounted(load)
           </div>
           <div class="field full">
             <label>Qué es gratis</label>
-            <Dropdown v-model="form.params.free_item.mode" :options="freeItemModeOptions" option-label="label" option-value="value" class="w-full" />
+            <Dropdown v-model="form.params.free_item!.mode" :options="freeItemModeOptions" option-label="label" option-value="value" class="w-full" />
           </div>
           <div v-if="form.params.free_item?.mode === 'SPECIFIC_PRODUCT'" class="field full">
             <label>Producto gratis</label>
-            <Dropdown v-model="form.params.free_item.product_id" :options="productOptions" option-label="name" option-value="id" placeholder="Seleccione producto" filter :loading="productOptionsLoading" class="w-full" @filter="onProductFilter" />
+            <Dropdown v-model="form.params.free_item!.product_id" :options="productOptions" option-label="name" option-value="id" placeholder="Seleccione producto" filter :loading="productOptionsLoading" class="w-full" @filter="onProductFilter" />
           </div>
           <div class="field full">
             <label>Requisito de compra</label>
-            <Dropdown v-model="form.conditions.requires_purchase.type" :options="requiresPurchaseTypeOptions" option-label="label" option-value="value" placeholder="Ninguno" class="w-full" />
+            <Dropdown v-model="form.conditions.requires_purchase!.type" :options="requiresPurchaseTypeOptions" option-label="label" option-value="value" placeholder="Ninguno" class="w-full" />
           </div>
           <div v-if="form.conditions.requires_purchase?.type === 'MIN_SUBTOTAL_IN_SCOPE'" class="field full">
             <label>Subtotal mínimo (COP)</label>
-            <InputNumber v-model="form.conditions.requires_purchase.min_subtotal" :min="0" class="w-full" />
+            <InputNumber v-model="form.conditions.requires_purchase!.min_subtotal" :min="0" class="w-full" />
           </div>
           <div v-if="form.conditions.requires_purchase?.type === 'MIN_QTY_IN_SCOPE'" class="field full">
             <span class="label-with-info">
               <label>Cantidad mínima</label>
               <i class="pi pi-info-circle info-icon" v-tooltip="'Cantidad mínima de unidades (del scope) que el cliente debe comprar para obtener el producto gratis.'" />
             </span>
-            <InputNumber v-model="form.conditions.requires_purchase.min_qty" :min="1" class="w-full" />
+            <InputNumber v-model="form.conditions.requires_purchase!.min_qty" :min="1" class="w-full" />
           </div>
           <div v-if="form.conditions.requires_purchase?.type === 'BUY_X_IN_SCOPE'" class="field full">
             <span class="label-with-info">
               <label>Compra X unidades (del scope)</label>
               <i class="pi pi-info-circle info-icon" v-tooltip="'Número de unidades (de los productos/categorías del scope) que el cliente debe comprar para obtener el producto gratis. Ej: 2 = debe llevar al menos 2 unidades para recibir 1 gratis.'" />
             </span>
-            <InputNumber v-model="form.conditions.requires_purchase.buy_x" :min="1" class="w-full" placeholder="Ej: 2" />
+            <InputNumber v-model="form.conditions.requires_purchase!.buy_x" :min="1" class="w-full" placeholder="Ej: 2" />
           </div>
           <div class="field">
             <span class="label-with-info">
