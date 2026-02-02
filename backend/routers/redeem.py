@@ -236,6 +236,21 @@ def redeem_code(
                     if prods:
                         discount_products_info = prods
             
+            # BUY_X_GET_Y_PERCENT_OFF: puede tener scope por categoría o producto
+            elif discount_type == "BUY_X_GET_Y_PERCENT_OFF":
+                scope_type = scope.get("scope_type") or ""
+                category_ids = scope.get("category_ids") or []
+                product_ids_scope = scope.get("product_ids") or []
+                if scope_type == "CATEGORY_IDS" and category_ids:
+                    discount_categories_info = _get_categories_info(category_ids, cuponera_site_ids)
+                if product_ids_scope:
+                    prods = []
+                    for pid in product_ids_scope:
+                        prod_info = _get_product_info(str(pid), cuponera_site_ids)
+                        if prod_info:
+                            prods.append(prod_info)
+                    if prods:
+                        discount_products_info = prods
             # Si es descuento por PRODUCTO, obtener info de los productos
             elif discount_type in ("PRODUCT_PERCENT_OFF", "PRODUCT_AMOUNT_OFF"):
                 product_ids = scope.get("product_ids") or []
