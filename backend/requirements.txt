@@ -3,3 +3,4 @@ uvicorn[standard]==0.32.1
 httpx==0.28.1
 phonenumbers==8.13.50
 pydantic[email]==2.10.5
+python-dotenv==1.0.1

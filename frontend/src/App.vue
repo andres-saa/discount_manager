@@ -31,7 +31,7 @@ const menuItems: MenuItem[] = [
   { label: 'Descuentos', icon: 'pi pi-percentage', to: '/descuentos' },
   { label: 'Cuponeras', icon: 'pi pi-calendar', to: '/cuponeras' },
   { label: 'Consultar cupón', icon: 'pi pi-ticket', to: '/consultar' },
-  { label: 'Pagar', icon: 'pi pi-credit-card', to: '/pagar' },
+  // { label: 'Pagar', icon: 'pi pi-credit-card', to: '/pag   ar' },
   { label: 'Documentación', icon: 'pi pi-book', to: '/manual' },
 ]
 </script>

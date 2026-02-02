@@ -11,6 +11,8 @@ import { api } from '../api'
 
 const folders = ref<Array<Record<string, unknown>>>([])
 const loading = ref(true)
+const saving = ref(false)
+const removing = ref<string | null>(null)
 const dialogVisible = ref(false)
 const editingId = ref<string | null>(null)
 const error = ref('')
@@ -50,6 +52,7 @@ function openEdit(row: Record<string, unknown>) {
 
 async function save() {
   error.value = ''
+  saving.value = true
   try {
     const body = {
       name: form.value.name.trim(),
@@ -65,18 +68,24 @@ async function save() {
     await load()
   } catch (e) {
     error.value = e instanceof Error ? e.message : String(e)
+  } finally {
+    saving.value = false
   }
 }
 
 async function remove(row: Record<string, unknown>) {
   const name = (row.name as string) || 'esta carpeta'
   if (!confirm(`¿Eliminar la carpeta "${name}"?\n\nSi confirma, se quitará esta carpeta de todos los descuentos y cuponeras que la usen (cascade).`)) return
+  const id = row.id as string
+  removing.value = id
   error.value = ''
   try {
-    await api.folders.delete(row.id as string, true)
+    await api.folders.delete(id, true)
     await load()
   } catch (e) {
     error.value = e instanceof Error ? e.message : String(e)
+  } finally {
+    removing.value = null
   }
 }
 
@@ -101,8 +110,8 @@ onMounted(load)
       </Column>
       <Column header="Acciones" style="width: 10rem">
         <template #body="{ data }">
-          <Button icon="pi pi-pencil" text rounded size="small" @click="openEdit(data)" />
-          <Button icon="pi pi-trash" text rounded severity="danger" size="small" @click="remove(data)" />
+          <Button icon="pi pi-pencil" text rounded size="small" :disabled="!!removing" @click="openEdit(data)" />
+          <Button icon="pi pi-trash" text rounded severity="danger" size="small" :loading="removing === data.id" :disabled="!!removing" @click="remove(data)" />
         </template>
       </Column>
     </DataTable>
@@ -123,8 +132,8 @@ onMounted(load)
         </div>
       </div>
       <template #footer>
-        <Button label="Cancelar" text @click="dialogVisible = false" />
-        <Button label="Guardar" icon="pi pi-check" @click="save" />
+        <Button label="Cancelar" text :disabled="saving" @click="dialogVisible = false" />
+        <Button label="Guardar" icon="pi pi-check" :loading="saving" @click="save" />
       </template>
     </Dialog>
   </div>

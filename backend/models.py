@@ -203,12 +203,19 @@ class CuponeraUserCreate(BaseModel):
             else:
                 parsed = phonenumbers.parse(f"{phone_code}{phone_cleaned}", None)
             
-            if not phonenumbers.is_valid_number(parsed):
-                country_name = phonenumbers.region_code_for_number(parsed) or phone_code
-                raise ValueError(f'Número de teléfono inválido para el código de país {phone_code}')
-            
-            return phone_cleaned  # Retornar solo dígitos
+            # Usar is_possible_number (más tolerante) o is_valid_number
+            if phonenumbers.is_valid_number(parsed):
+                return phone_cleaned
+            if phonenumbers.is_possible_number(parsed):
+                return phone_cleaned
+            # Colombia (+57): aceptar 9-10 dígitos que empiecen con 3 (móviles sin 0 inicial)
+            if phone_code in ('+57', '57') and 9 <= len(phone_cleaned) <= 10 and phone_cleaned.startswith('3'):
+                return phone_cleaned
+            raise ValueError(f'Número de teléfono inválido para el código de país {phone_code}. Colombia: 10 dígitos, empezando con 3 (ej. 3226893988)')
         except phonenumbers.NumberParseException:
+            # Si falla el parse, verificar formato básico para Colombia
+            if phone_code in ('+57', '57') and 9 <= len(phone_cleaned) <= 10 and phone_cleaned.startswith('3'):
+                return phone_cleaned
             raise ValueError(f'Formato de teléfono inválido para el código de país {phone_code}')
 
 
@@ -268,11 +275,14 @@ class CuponeraUserUpdate(BaseModel):
             else:
                 parsed = phonenumbers.parse(f"{phone_code}{phone_cleaned}", None)
             
-            if not phonenumbers.is_valid_number(parsed):
-                raise ValueError(f'Número de teléfono inválido para el código de país {phone_code}')
-            
-            return phone_cleaned
+            if phonenumbers.is_valid_number(parsed) or phonenumbers.is_possible_number(parsed):
+                return phone_cleaned
+            if phone_code in ('+57', '57') and 9 <= len(phone_cleaned) <= 10 and phone_cleaned.startswith('3'):
+                return phone_cleaned
+            raise ValueError(f'Número de teléfono inválido para el código de país {phone_code}')
         except phonenumbers.NumberParseException:
+            if phone_code in ('+57', '57') and 9 <= len(phone_cleaned) <= 10 and phone_cleaned.startswith('3'):
+                return phone_cleaned
             raise ValueError(f'Formato de teléfono inválido para el código de país {phone_code}')
 
 

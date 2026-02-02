@@ -1,4 +1,4 @@
-const BASE = 'https://discounts.salchimonster.com'
+const BASE = import.meta.env.DEV ? 'http://localhost:8000' : 'https://discounts.salchimonster.com'
 
 async function request<T>(
   path: string,

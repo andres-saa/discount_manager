@@ -40,5 +40,25 @@ build/
 htmlcov/
 .tox/
 
-# Optional: datos locales de desarrollo (descomenta si no quieres versionarlos)
-# data/
+# Base de datos / datos persistentes (no subir al servidor para evitar corrupción)
+data/
+**/data/*.json
+**/data/**/*.json
+# JSON de almacenamiento local (por si están en raíz del backend)
+sites.json
+menu_site_*.json
+discounts.json
+folders.json
+cuponeras.json
+cuponera_usage.json
+cuponera_users.json
+# Paycache (no subir al servidor)
+paycache/
+**/paycache/
+
+# Otros
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+db/

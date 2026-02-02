@@ -9,6 +9,7 @@ import InputNumber from 'primevue/inputnumber'
 import Dropdown from 'primevue/dropdown'
 import MultiSelect from 'primevue/multiselect'
 import Message from 'primevue/message'
+import ProgressSpinner from 'primevue/progressspinner'
 import { useToast } from 'primevue/usetoast'
 import { api } from '../api'
 
@@ -54,6 +55,8 @@ const discounts = ref<Array<Record<string, unknown>>>([])
 const sites = ref<Array<Record<string, unknown>>>([])
 const folders = ref<Array<Record<string, unknown>>>([])
 const loading = ref(true)
+const saving = ref(false)
+const removing = ref<string | null>(null)
 const dialogVisible = ref(false)
 const editingId = ref<string | null>(null)
 const error = ref('')
@@ -364,6 +367,7 @@ async function save() {
     toast.add({ severity: 'error', summary: 'Error de validación', detail: message, life: 6000 })
     return
   }
+  saving.value = true
   try {
     const scope = (form.value.type === 'CART_PERCENT_OFF' || form.value.type === 'CART_AMOUNT_OFF')
       ? { scope_type: 'ALL_ITEMS' as const, category_ids: [], product_ids: [], exclude_category_ids: [], exclude_product_ids: [] }
@@ -392,11 +396,14 @@ async function save() {
     const message = getErrorMessage(e)
     error.value = message
     toast.add({ severity: 'error', summary: 'Error al guardar', detail: message, life: 8000 })
+  } finally {
+    saving.value = false
   }
 }
 
 async function remove(id: string) {
   if (!confirm('¿Eliminar este descuento?')) return
+  removing.value = id
   error.value = ''
   try {
     await api.discounts.delete(id)
@@ -406,6 +413,8 @@ async function remove(id: string) {
     const message = getErrorMessage(e)
     error.value = message
     toast.add({ severity: 'error', summary: 'Error al eliminar', detail: message, life: 8000 })
+  } finally {
+    removing.value = null
   }
 }
 
@@ -435,7 +444,10 @@ onMounted(load)
       <Button label="Nuevo descuento" icon="pi pi-plus" @click="openCreate" />
       <Dropdown v-model="filterFolder" :options="discountFolders" placeholder="Todas las carpetas" class="filter-folder" :show-clear="true" />
     </div>
-    <div v-if="loading" class="loading-msg">Cargando…</div>
+    <div v-if="loading" class="loading-block">
+      <ProgressSpinner style="width: 40px; height: 40px" stroke-width="3" />
+      <span>Cargando…</span>
+    </div>
     <template v-else>
       <section v-for="g in discountsGroupedByFolder" :key="g.folder || '_'" class="folder-section">
         <h3 class="folder-title">
@@ -454,8 +466,8 @@ onMounted(load)
           </Column>
           <Column header="Acciones" style="width: 10rem">
             <template #body="{ data }">
-              <Button icon="pi pi-pencil" text rounded size="small" @click="openEdit(data)" />
-              <Button icon="pi pi-trash" text rounded severity="danger" size="small" @click="remove(data.id as string)" />
+              <Button icon="pi pi-pencil" text rounded size="small" :disabled="!!removing" @click="openEdit(data)" />
+              <Button icon="pi pi-trash" text rounded severity="danger" size="small" :loading="removing === data.id" :disabled="!!removing" @click="remove(data.id as string)" />
             </template>
           </Column>
         </DataTable>
@@ -686,8 +698,8 @@ onMounted(load)
         </template>
       </div>
       <template #footer>
-        <Button label="Cancelar" text @click="dialogVisible = false" />
-        <Button label="Guardar" icon="pi pi-check" :disabled="!(form.name || '').trim()" @click="save" />
+        <Button label="Cancelar" text :disabled="saving" @click="dialogVisible = false" />
+        <Button label="Guardar" icon="pi pi-check" :loading="saving" :disabled="!(form.name || '').trim() || saving" @click="save" />
       </template>
     </Dialog>
   </div>
@@ -705,7 +717,14 @@ onMounted(load)
 .w-full { width: 100%; }
 .scope-fixed { color: #666; font-size: 0.9rem; }
 .filter-folder { min-width: 12rem; }
-.loading-msg { padding: 1rem; color: #666; }
+.loading-block {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  color: #666;
+}
+.loading-block span { font-size: 0.95rem; }
 .folder-section { margin-bottom: 1.5rem; }
 .folder-title { display: flex; align-items: center; gap: 0.5rem; margin: 0 0 0.5rem 0; font-size: 1rem; color: #495057; }
 .folder-title .folder-count { color: #868e96; font-weight: normal; }

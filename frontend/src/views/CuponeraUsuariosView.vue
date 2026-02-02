@@ -17,6 +17,8 @@ const cuponeraId = computed(() => route.params.id as string)
 const cuponera = ref<Record<string, unknown> | null>(null)
 const users = ref<Array<Record<string, unknown>>>([])
 const loading = ref(true)
+const saving = ref(false)
+const removing = ref<string | null>(null)
 const dialogVisible = ref(false)
 const editingUserId = ref<string | null>(null)
 const error = ref('')
@@ -88,7 +90,7 @@ async function submit() {
   const lastName = form.value.last_name?.trim()
   const email = form.value.email?.trim()
   const phone = form.value.phone?.trim()
-  
+
   // Validaciones del lado del cliente
   if (!firstName) {
     error.value = 'El nombre es obligatorio.'
@@ -154,7 +156,7 @@ async function submit() {
     })
     return
   }
-  
+
   const phoneCode = (form.value.phone_code?.trim() || '+57').replace(/^(\d+)$/, '+$1')
   const payload = {
     first_name: firstName,
@@ -172,6 +174,7 @@ async function submit() {
     }
   }
 
+  saving.value = true
   try {
     if (editingUserId.value) {
       await api.cuponeraUsers.update(cuponeraId.value, editingUserId.value, payload)
@@ -194,7 +197,6 @@ async function submit() {
     editingUserId.value = null
     await load()
   } catch (e) {
-    // Extraer mensaje de error del backend
     const errorMsg = e instanceof Error ? e.message : String(e)
     error.value = errorMsg
     toast.add({
@@ -203,11 +205,14 @@ async function submit() {
       detail: errorMsg,
       life: 5000,
     })
+  } finally {
+    saving.value = false
   }
 }
 
 async function remove(userId: string) {
   if (!confirm('¿Eliminar este usuario?')) return
+  removing.value = userId
   error.value = ''
   try {
     await api.cuponeraUsers.delete(cuponeraId.value, userId)
@@ -227,6 +232,8 @@ async function remove(userId: string) {
       detail: errorMsg,
       life: 5000,
     })
+  } finally {
+    removing.value = null
   }
 }
 
@@ -264,8 +271,8 @@ onMounted(load)
       <Column field="address" header="Dirección (opcional)" />
       <Column header="Acciones" style="width: 8rem">
         <template #body="{ data }">
-          <Button icon="pi pi-pencil" text rounded size="small" title="Editar" @click="openEdit(data)" />
-          <Button icon="pi pi-trash" text rounded severity="danger" size="small" title="Eliminar" @click="remove(data.id as string)" />
+          <Button icon="pi pi-pencil" text rounded size="small" title="Editar" :disabled="!!removing" @click="openEdit(data)" />
+          <Button icon="pi pi-trash" text rounded severity="danger" size="small" title="Eliminar" :loading="removing === data.id" :disabled="!!removing" @click="remove(data.id as string)" />
         </template>
       </Column>
     </DataTable>
@@ -304,8 +311,8 @@ onMounted(load)
         </div>
       </div>
       <template #footer>
-        <Button label="Cancelar" text @click="dialogVisible = false; editingUserId = null" />
-        <Button :label="editingUserId ? 'Guardar' : 'Registrar'" icon="pi pi-check" @click="submit" />
+        <Button label="Cancelar" text :disabled="saving" @click="dialogVisible = false; editingUserId = null" />
+        <Button :label="editingUserId ? 'Guardar' : 'Registrar'" icon="pi pi-check" :loading="saving" @click="submit" />
       </template>
     </Dialog>
   </div>

@@ -1,6 +1,6 @@
 # Backend - FastAPI (Cuponera Salchimonster)
 
-API para gestión de descuentos, cuponeras y canje de códigos. Datos en JSON locales; sedes y menús se sincronizan cada 10 minutos desde el API externo.
+API para gestión de descuentos, cuponeras y canje de códigos. **Archivos JSON locales** en `data/` como almacenamiento; sedes y menús se sincronizan cada 10 minutos desde el API externo.
 
 ## Instalación
 
@@ -8,6 +8,10 @@ API para gestión de descuentos, cuponeras y canje de códigos. Datos en JSON lo
 cd backend
 pip install -r requirements.txt
 ```
+
+## Configuración
+
+Los datos se almacenan en `data/*.json`. Las sedes y menús se sincronizan desde el API externo. No es necesaria configuración adicional para desarrollo.
 
 ## Ejecución
 
@@ -17,16 +21,9 @@ uvicorn main:app --reload
 
 La API estará en `http://127.0.0.1:8000`. Documentación interactiva en `/docs`.
 
-## Datos
+## Datos (JSON local)
 
-- **data/sites.json**: Sedes (sincronizado desde `https://backend.salchimonster.com/sites`).
-- **data/menus/site_{id}.json**: Menú por sede (desde `https://backend.salchimonster.com/tiendas/{id}/products-light`).
-- **data/discounts.json**: Reglas de descuento (CRUD local).
-- **data/cuponeras.json**: Cuponeras con calendario (fecha → lista de discount_id).
-- **data/cuponera_users.json**: Usuarios registrados por cuponera (código único por usuario).
-- **data/cuponera_usage.json**: Uso por día (código + fecha → contador de usos).
-
-Al arrancar, si `data/` está vacío, se copian `sites.json` y `menu_site_4.json` desde el directorio backend.
+Archivos en `data/`: `sites.json`, `menus/site_*.json`, `discounts.json`, `folders.json`, `cuponeras.json`, `cuponera_usage.json`, `cuponera_users.json`. Sedes y menús se sincronizan cada 10 min desde `https://backend.salchimonster.com/...`.
 
 ## Endpoints principales
 

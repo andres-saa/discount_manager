@@ -11,6 +11,7 @@ import Dropdown from 'primevue/dropdown'
 import MultiSelect from 'primevue/multiselect'
 import DatePicker from 'primevue/datepicker'
 import Message from 'primevue/message'
+import ProgressSpinner from 'primevue/progressspinner'
 import { api } from '../api'
 
 const router = useRouter()
@@ -19,6 +20,8 @@ const discounts = ref<Array<Record<string, unknown>>>([])
 const sites = ref<Array<Record<string, unknown>>>([])
 const folders = ref<Array<Record<string, unknown>>>([])
 const loading = ref(true)
+const saving = ref(false)
+const removing = ref<string | null>(null)
 const dialogVisible = ref(false)
 const editingId = ref<string | null>(null)
 const error = ref('')
@@ -285,6 +288,7 @@ function openEdit(row: Record<string, unknown>) {
 
 async function save() {
   error.value = ''
+  saving.value = true
   try {
     const body = {
       name: form.value.name,
@@ -306,17 +310,22 @@ async function save() {
     await load()
   } catch (e) {
     error.value = e instanceof Error ? e.message : String(e)
+  } finally {
+    saving.value = false
   }
 }
 
 async function remove(id: string) {
   if (!confirm('¿Eliminar esta cuponera?')) return
+  removing.value = id
   error.value = ''
   try {
     await api.cuponeras.delete(id)
     await load()
   } catch (e) {
     error.value = e instanceof Error ? e.message : String(e)
+  } finally {
+    removing.value = null
   }
 }
 
@@ -336,7 +345,10 @@ onMounted(load)
       <Button label="Nueva cuponera" icon="pi pi-plus" @click="openCreate" />
       <Dropdown v-model="filterFolder" :options="cuponeraFolders" placeholder="Todas las carpetas" class="filter-folder" :show-clear="true" />
     </div>
-    <div v-if="loading" class="loading-msg">Cargando…</div>
+    <div v-if="loading" class="loading-block">
+      <ProgressSpinner style="width: 40px; height: 40px" stroke-width="3" />
+      <span>Cargando…</span>
+    </div>
     <template v-else>
       <section v-for="g in cuponerasGroupedByFolder" :key="g.folder || '_'" class="folder-section">
         <h3 class="folder-title">
@@ -365,9 +377,9 @@ onMounted(load)
           </Column>
           <Column header="Acciones" style="width: 12rem">
             <template #body="{ data }">
-              <Button label="Usuarios" icon="pi pi-users" text rounded size="small" @click="goToUsers(data)" />
-              <Button icon="pi pi-pencil" text rounded size="small" @click="openEdit(data)" />
-              <Button icon="pi pi-trash" text rounded severity="danger" size="small" @click="remove(data.id as string)" />
+              <Button label="Usuarios" icon="pi pi-users" text rounded size="small" :disabled="!!removing" @click="goToUsers(data)" />
+              <Button icon="pi pi-pencil" text rounded size="small" :disabled="!!removing" @click="openEdit(data)" />
+              <Button icon="pi pi-trash" text rounded severity="danger" size="small" :loading="removing === data.id" :disabled="!!removing" @click="remove(data.id as string)" />
             </template>
           </Column>
         </DataTable>
@@ -459,8 +471,8 @@ onMounted(load)
         </section>
       </div>
       <template #footer>
-        <Button label="Cancelar" text @click="dialogVisible = false" />
-        <Button label="Guardar cuponera" icon="pi pi-check" @click="save" />
+        <Button label="Cancelar" text :disabled="saving" @click="dialogVisible = false" />
+        <Button label="Guardar cuponera" icon="pi pi-check" :loading="saving" @click="save" />
       </template>
     </Dialog>
 
@@ -586,7 +598,14 @@ onMounted(load)
 .day-panel label { font-weight: 500; }
 
 .filter-folder { min-width: 12rem; }
-.loading-msg { padding: 1rem; color: #666; }
+.loading-block {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  color: #666;
+}
+.loading-block span { font-size: 0.95rem; }
 .folder-section { margin-bottom: 1.5rem; }
 .folder-title { display: flex; align-items: center; gap: 0.5rem; margin: 0 0 0.5rem 0; font-size: 1rem; color: #495057; }
 .folder-title .folder-count { color: #868e96; font-weight: normal; }
@@ -636,7 +655,7 @@ html.theme-dark .calendar-day.outside-vigencia:hover,
 html.theme-dark .calendar-day:disabled:hover { background: #1f2937 !important; box-shadow: none; }
 html.theme-dark .day-badge { background: #51b46d; color: #fff; }
 html.theme-dark .subtitle,
-html.theme-dark .loading-msg { color: #9ca3af; }
+html.theme-dark .loading-block { color: #9ca3af; }
 html.theme-dark .field-hint { color: #9ca3af; }
 html.theme-dark .folder-title { color: #d1d5db; }
 html.theme-dark .folder-title .folder-count { color: #9ca3af; }

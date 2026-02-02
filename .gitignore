@@ -1,0 +1,6 @@
+# La tienda (proyecto aparte)
+salchimonster_colombia/
+
+# Paycache (no subir al servidor)
+paycache/
+**/paycache/

@@ -1,31 +1,19 @@
 """CRUD de usuarios de cuponera (registro y códigos)."""
-import json
-import os
 from datetime import date
 
 from fastapi import APIRouter, HTTPException
 
 from models import CuponeraUser, CuponeraUserCreate, CuponeraUserUpdate
-from storage import read_cuponeras
+from storage import (
+    delete_cuponera_user as storage_delete_cuponera_user,
+    get_cuponera,
+    get_cuponera_user,
+    insert_cuponera_user,
+    read_cuponeras,
+    read_cuponera_users,
+    update_cuponera_user as storage_update_cuponera_user,
+)
 from utils import new_id, new_user_code, now_iso
-
-from config import DATA_DIR
-
-CUPONERA_USERS_JSON = os.path.join(DATA_DIR, "cuponera_users.json")
-
-
-def _read_cuponera_users() -> list[dict]:
-    if not os.path.exists(CUPONERA_USERS_JSON):
-        return []
-    with open(CUPONERA_USERS_JSON, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def _write_cuponera_users(data: list[dict]):
-    os.makedirs(DATA_DIR, exist_ok=True)
-    with open(CUPONERA_USERS_JSON, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
 
 router = APIRouter(prefix="/cuponeras", tags=["cuponera-users"])
 
@@ -49,8 +37,8 @@ def _is_code_used_in_vigent_cuponera(code: str, exclude_user_id: str | None = No
     if not code_upper:
         return False
     today = date.today().isoformat()
-    users = _read_cuponera_users()
-    cuponeras = {c["id"]: c for c in read_cuponeras() if c.get("id")}
+    users = read_cuponera_users()
+    cuponeras = {c["id"]: c for c in read_cuponeras() if c.get("id")}  # read_cuponeras for bulk
     for u in users:
         if u.get("id") == exclude_user_id:
             continue
@@ -63,24 +51,20 @@ def _is_code_used_in_vigent_cuponera(code: str, exclude_user_id: str | None = No
 
 
 @router.get("/{cuponera_id}/users", response_model=list[CuponeraUser])
-def list_cuponera_users(cuponera_id: str):
-    cuponeras = read_cuponeras()
-    if not any(c.get("id") == cuponera_id for c in cuponeras):
+def list_cuponera_users_route(cuponera_id: str):
+    if not get_cuponera(cuponera_id):
         raise HTTPException(status_code=404, detail="Cuponera no encontrada")
-    users = [u for u in _read_cuponera_users() if u.get("cuponera_id") == cuponera_id]
-    return users
+    return [u for u in read_cuponera_users() if u.get("cuponera_id") == cuponera_id]
 
 
 @router.post("/{cuponera_id}/users", response_model=CuponeraUser, status_code=201)
 def register_cuponera_user(cuponera_id: str, body: CuponeraUserCreate):
     import phonenumbers
     
-    cuponeras = read_cuponeras()
-    if not any(c.get("id") == cuponera_id for c in cuponeras):
+    if not get_cuponera(cuponera_id):
         raise HTTPException(status_code=404, detail="Cuponera no encontrada")
     if body.cuponera_id is not None and body.cuponera_id != cuponera_id:
         raise HTTPException(status_code=400, detail="cuponera_id no coincide")
-    users = _read_cuponera_users()
 
     code_raw = (body.code or "").strip()
     if code_raw:
@@ -156,37 +140,24 @@ def register_cuponera_user(cuponera_id: str, body: CuponeraUserCreate):
         "address": (body.address or "").strip() or None,
         "created_at": now,
     }
-    users.append(doc)
-    _write_cuponera_users(users)
-    return doc
+    return insert_cuponera_user(doc)
 
 
 @router.get("/{cuponera_id}/users/{user_id}", response_model=CuponeraUser)
-def get_cuponera_user(cuponera_id: str, user_id: str):
-    users = _read_cuponera_users()
-    for u in users:
-        if u.get("cuponera_id") == cuponera_id and u.get("id") == user_id:
-            return u
-    raise HTTPException(status_code=404, detail="Usuario no encontrado")
+def get_cuponera_user_route(cuponera_id: str, user_id: str):
+    u = get_cuponera_user(cuponera_id, user_id)
+    if not u:
+        raise HTTPException(status_code=404, detail="Usuario no encontrado")
+    return u
 
 
 @router.patch("/{cuponera_id}/users/{user_id}", response_model=CuponeraUser)
-def update_cuponera_user(cuponera_id: str, user_id: str, body: CuponeraUserUpdate):
+def update_cuponera_user_route(cuponera_id: str, user_id: str, body: CuponeraUserUpdate):
     import phonenumbers
     
-    cuponeras = read_cuponeras()
-    if not any(c.get("id") == cuponera_id for c in cuponeras):
-        raise HTTPException(status_code=404, detail="Cuponera no encontrada")
-    users = _read_cuponera_users()
-    index = None
-    for i, u in enumerate(users):
-        if u.get("cuponera_id") == cuponera_id and u.get("id") == user_id:
-            index = i
-            break
-    if index is None:
+    doc = get_cuponera_user(cuponera_id, user_id)
+    if not doc:
         raise HTTPException(status_code=404, detail="Usuario no encontrado")
-
-    doc = users[index]
 
     # Código: validar duplicados si se cambia
     if body.code is not None:
@@ -265,14 +236,13 @@ def update_cuponera_user(cuponera_id: str, user_id: str, body: CuponeraUserUpdat
         val = (body.address or "").strip()
         doc["address"] = val if val else None
 
-    _write_cuponera_users(users)
-    return doc
+    upd = {k: v for k, v in doc.items() if k not in ("id", "cuponera_id", "created_at")}
+    upd["updated_at"] = now_iso()
+    result = storage_update_cuponera_user(cuponera_id, user_id, upd)
+    return result
 
 
 @router.delete("/{cuponera_id}/users/{user_id}", status_code=204)
-def delete_cuponera_user(cuponera_id: str, user_id: str):
-    users = _read_cuponera_users()
-    new_users = [u for u in users if not (u.get("cuponera_id") == cuponera_id and u.get("id") == user_id)]
-    if len(new_users) == len(users):
+def delete_cuponera_user_route(cuponera_id: str, user_id: str):
+    if not storage_delete_cuponera_user(cuponera_id, user_id):
         raise HTTPException(status_code=404, detail="Usuario no encontrado")
-    _write_cuponera_users(new_users)

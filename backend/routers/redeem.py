@@ -1,24 +1,10 @@
 """Canjear código de cuponera: obtener descuentos del día y registrar uso."""
-import json
-import os
 from datetime import date
 
 from fastapi import APIRouter, HTTPException, Query
 
 from models import RedeemDiscountItem, RedeemResponse, RedeemUserInfo
-from storage import read_cuponeras, read_cuponera_usage, read_discounts, write_cuponera_usage, read_menu
-
-from config import DATA_DIR
-
-CUPONERA_USERS_JSON = os.path.join(DATA_DIR, "cuponera_users.json")
-
-
-def _read_cuponera_users() -> list[dict]:
-    if not os.path.exists(CUPONERA_USERS_JSON):
-        return []
-    with open(CUPONERA_USERS_JSON, "r", encoding="utf-8") as f:
-        return json.load(f)
-
+from storage import read_cuponeras, read_cuponera_usage, read_cuponera_users, read_discounts, write_cuponera_usage, read_menu
 
 router = APIRouter(prefix="", tags=["redeem"])
 
@@ -110,7 +96,7 @@ def redeem_code(
     if not code_upper:
         raise HTTPException(status_code=400, detail="Código requerido")
 
-    users = _read_cuponera_users()
+    users = read_cuponera_users()
     cuponeras = read_cuponeras()
     cuponera_map = {c.get("id"): c for c in cuponeras if c.get("id")}
 
@@ -209,29 +195,49 @@ def redeem_code(
             scope = discount.get("scope") or {}
             params = discount.get("params") or {}
             
-            # Si es FREE_ITEM, obtener info del producto
+            # Si es FREE_ITEM, obtener info del producto y (si aplica) categorías o productos del scope para requires_purchase
             if discount_type == "FREE_ITEM":
                 free_item = params.get("free_item") or {}
                 product_id = free_item.get("product_id")
-                
                 if product_id:
-                    # Buscar producto en menús
                     product_info = _get_product_info(product_id, cuponera_site_ids)
                     if product_info:
                         free_product_info = product_info
-                        # Agregar max_qty del descuento
                         limits = discount.get("limits") or {}
                         free_product_info["max_qty"] = limits.get("max_free_qty", 1)
-            
+                scope_type = scope.get("scope_type") or ""
+                category_ids = scope.get("category_ids") or []
+                product_ids = scope.get("product_ids") or []
+                if scope_type == "CATEGORY_IDS" and category_ids:
+                    discount_categories_info = _get_categories_info(category_ids, cuponera_site_ids)
+                # Incluir discount_products si hay product_ids (aunque scope_type sea ALL_ITEMS)
+                if product_ids:
+                    prods = []
+                    for pid in product_ids:
+                        prod_info = _get_product_info(str(pid), cuponera_site_ids)
+                        if prod_info:
+                            prods.append(prod_info)
+                    if prods:
+                        discount_products_info = prods
             # Si es descuento por CATEGORÍA, obtener info de las categorías
             elif discount_type in ("CATEGORY_PERCENT_OFF", "CATEGORY_AMOUNT_OFF", "BUY_M_PAY_N"):
                 scope_type = scope.get("scope_type") or ""
                 category_ids = scope.get("category_ids") or []
+                product_ids_scope = scope.get("product_ids") or []
                 if scope_type == "CATEGORY_IDS" and category_ids:
                     discount_categories_info = _get_categories_info(category_ids, cuponera_site_ids)
+                # BUY_M_PAY_N: incluir discount_products si hay product_ids (aunque scope_type sea ALL_ITEMS)
+                if discount_type == "BUY_M_PAY_N" and product_ids_scope:
+                    prods = []
+                    for pid in product_ids_scope:
+                        prod_info = _get_product_info(str(pid), cuponera_site_ids)
+                        if prod_info:
+                            prods.append(prod_info)
+                    if prods:
+                        discount_products_info = prods
             
             # Si es descuento por PRODUCTO, obtener info de los productos
-            elif discount_type in ("PRODUCT_PERCENT_OFF", "PRODUCT_AMOUNT_OFF") or (discount_type == "BUY_M_PAY_N" and scope.get("scope_type") == "PRODUCT_IDS"):
+            elif discount_type in ("PRODUCT_PERCENT_OFF", "PRODUCT_AMOUNT_OFF"):
                 product_ids = scope.get("product_ids") or []
                 if product_ids:
                     prods = []
@@ -242,13 +248,19 @@ def redeem_code(
                     if prods:
                         discount_products_info = prods
 
-    uses_per_day = cuponera.get("uses_per_day", 1)
+    # Normalizar tipos por si MongoDB/JSON devuelve otro tipo
+    uses_per_day = int(cuponera.get("uses_per_day") or 1)
+    cuponera_id_str = str(cuponera_id or "")
+    today_str = str(today or "")
+
     usage_list = read_cuponera_usage()
-    key = f"{cuponera_id}|{code_upper}|{today}"
     current_count = 0
     for rec in usage_list:
-        if rec.get("cuponera_id") == cuponera_id and (rec.get("user_code") or "").upper() == code_upper and rec.get("date") == today:
-            current_count = rec.get("uses_count", 0)
+        rec_cid = str(rec.get("cuponera_id") or "")
+        rec_code = (rec.get("user_code") or "").strip().upper()
+        rec_date = str(rec.get("date") or "")
+        if rec_cid == cuponera_id_str and rec_code == code_upper and rec_date == today_str:
+            current_count = int(rec.get("uses_count") or 0)
             break
 
     uses_remaining = max(0, uses_per_day - current_count)
@@ -257,15 +269,18 @@ def redeem_code(
         # Incrementar uso
         found = False
         for rec in usage_list:
-            if rec.get("cuponera_id") == cuponera_id and (rec.get("user_code") or "").upper() == code_upper and rec.get("date") == today:
-                rec["uses_count"] = rec.get("uses_count", 0) + 1
+            rec_cid = str(rec.get("cuponera_id") or "")
+            rec_code = (rec.get("user_code") or "").strip().upper()
+            rec_date = str(rec.get("date") or "")
+            if rec_cid == cuponera_id_str and rec_code == code_upper and rec_date == today_str:
+                rec["uses_count"] = int(rec.get("uses_count") or 0) + 1
                 found = True
                 break
         if not found:
             usage_list.append({
-                "cuponera_id": cuponera_id,
+                "cuponera_id": cuponera_id_str,
                 "user_code": code_upper,
-                "date": today,
+                "date": today_str,
                 "uses_count": 1,
             })
         write_cuponera_usage(usage_list)
